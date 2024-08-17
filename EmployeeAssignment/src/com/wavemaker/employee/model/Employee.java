@@ -5,9 +5,17 @@ public class Employee {
     private String empName;
     private int age;
     private String gender;
+    private int addressId;
     private Address address;
     public int getEmpId() {
         return empId;
+    }
+    public int getAddressId() {
+        return addressId;
+    }
+
+    public void setAddressId(int addressId) {
+        this.addressId = addressId;
     }
 
     public void setEmpId(int empId) {

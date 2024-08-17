@@ -138,7 +138,7 @@ public class EmployeeController {
         scanner.nextLine();
         if (userChoice == 1) {
             Address address = new Address();
-            System.out.println("Enter Address Id : ");
+            System.out.println("Enter ID : ");
             int addressId = scanner.nextInt();
             scanner.nextLine();
             System.out.println("Enter State : ");
@@ -148,8 +148,8 @@ public class EmployeeController {
             System.out.println("Enter Pincode : ");
             int pincode = scanner.nextInt();
             scanner.nextLine();
-            address.setAddressId(addressId);
             address.setState(state);
+            address.setAddressId(addressId);
             address.setCity(city);
             address.setPincode(pincode);
             return address;

@@ -3,14 +3,18 @@ package com.wavemaker.employee.repository.Impl;
 import com.wavemaker.employee.exception.EmployeeAlreadyExistsException;
 import com.wavemaker.employee.exception.EmployeeNotFoundException;
 import com.wavemaker.employee.model.Employee;
+import com.wavemaker.employee.repository.AddressRepository;
 import com.wavemaker.employee.repository.EmployeeRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-public class EmployeeRepositoryInMemoryImpl implements EmployeeRepository {
+import java.util.concurrent.ConcurrentHashMap;
 
-    private static final Map<Integer, Employee> employeeMap = new HashMap<>();
+public class EmployeeRepositoryInMemoryImpl implements EmployeeRepository {
+    private  static  AddressRepository addressRepository;
+
+    private static final ConcurrentHashMap<Integer,Employee> employeeMap = new ConcurrentHashMap<>();
 
     @Override
     public Employee getEmployeeById(int empId) {

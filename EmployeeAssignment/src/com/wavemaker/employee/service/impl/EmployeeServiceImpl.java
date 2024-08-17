@@ -1,5 +1,6 @@
 package com.wavemaker.employee.service.impl;
 
+import com.wavemaker.employee.employeefactory.AddressRepositoryFactory;
 import com.wavemaker.employee.employeefactory.EmployeeRepositoryFactory;
 import com.wavemaker.employee.model.Employee;
 import com.wavemaker.employee.repository.AddressRepository;
@@ -14,6 +15,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     public EmployeeServiceImpl(int option) {
         employeeRepository = EmployeeRepositoryFactory.getEmployeeRepositoryInstance(option);
+        addressRepository = AddressRepositoryFactory.getAddressRepositoryInstance(option);
     }
 
     @Override
@@ -23,7 +25,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public boolean addEmployee(Employee employee) {
-        if(employee.getAddress()!=null){
+        if (employee.getAddress() != null) {
             addressRepository.addAddress(employee.getAddress());
         }
 

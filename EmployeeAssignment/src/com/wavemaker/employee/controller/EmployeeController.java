@@ -2,7 +2,9 @@ package com.wavemaker.employee.controller;
 
 import com.wavemaker.employee.model.Address;
 import com.wavemaker.employee.model.Employee;
+import com.wavemaker.employee.service.AddressService;
 import com.wavemaker.employee.service.EmployeeService;
+import com.wavemaker.employee.service.impl.AddressServiceImpl;
 import com.wavemaker.employee.service.impl.EmployeeServiceImpl;
 
 import java.util.List;
@@ -11,6 +13,7 @@ import java.util.Scanner;
 public class EmployeeController {
 
     private static EmployeeService employeeService;
+    private static AddressService addressService;
 
 
     public static void main(String[] args) {
@@ -20,6 +23,7 @@ public class EmployeeController {
         System.out.print("Enter your option to storage: ");
         int storageOption = scanner.nextInt();
         employeeService = new EmployeeServiceImpl(storageOption);
+        addressService = new AddressServiceImpl(storageOption);
 
         while (true) {
             System.out.println("\nEmployee Management System");
@@ -28,7 +32,8 @@ public class EmployeeController {
             System.out.println("3. Get All Employees");
             System.out.println("4. Update Employee");
             System.out.println("5. Delete Employee");
-            System.out.println("6. Exit");
+            System.out.println("6. update Address");
+            System.out.println("7. Exit");
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
@@ -51,6 +56,9 @@ public class EmployeeController {
                     deleteEmployee(scanner);
                     break;
                 case 6:
+                    updateAdress(scanner);
+                    break;
+                case 7:
                     System.out.println("Exiting...");
                     scanner.close();
                     return;
@@ -59,6 +67,44 @@ public class EmployeeController {
             }
         }
     }
+
+    private static void updateAdress(Scanner scanner) {
+        System.out.print("Enter Address ID to update: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();  // Consume newline
+
+        Address address = addressService.getAddressById(id);
+        if (address != null) {
+            address = takeAddressFields(scanner, id);  // Pass the existing address ID
+            Address updated = addressService.updateAddress(address);
+            if (updated != null) {
+                System.out.println("Address updated successfully.");
+            } else {
+                System.out.println("Failed to update address.");
+            }
+        } else {
+            System.out.println("Address not found.");
+        }
+    }
+
+
+    private static Address takeAddressFields(Scanner scanner, int addressId) {
+        System.out.println("Enter City Name to add: ");
+        String cityName = scanner.nextLine();
+        System.out.println("Enter State to add: ");
+        String state = scanner.nextLine();
+        System.out.println("Enter pin Code to add: ");
+        int pinCode = scanner.nextInt();
+        scanner.nextLine();  // Consume newline
+
+        Address address = new Address();
+        address.setAddressId(addressId);  // Set the address ID
+        address.setCity(cityName);
+        address.setState(state);
+        address.setPincode(pinCode);
+        return address;
+    }
+
 
     private static void addEmployee(Scanner scanner) {
         Employee employee = getEmployeeDetails(scanner);
@@ -180,7 +226,7 @@ public class EmployeeController {
     }
 
     private static void printEmployee(Employee employee) {
-        System.out.println("Employee Details of employeeId :"+employee.getEmpId());
+        System.out.println("Employee Details of employeeId :" + employee.getEmpId());
         System.out.println("ID: " + employee.getEmpId());
         System.out.println("Name: " + employee.getEmpName());
         System.out.println("Age: " + employee.getAge());

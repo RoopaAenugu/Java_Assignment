@@ -2,9 +2,11 @@ package com.wavemaker.employee.repository;
 
 import com.wavemaker.employee.model.Address;
 
+import java.util.List;
+
 public interface AddressRepository {
-    public Address getAddressById(int addressId);
+    public Address getAddressByEmpId(int empId);
     public boolean addAddress(Address address);
-    public Address deleteAddress(int addressId);
+    public Address deleteAddressByEmpId(int empId);
     public Address updateAddress(Address address);
 }

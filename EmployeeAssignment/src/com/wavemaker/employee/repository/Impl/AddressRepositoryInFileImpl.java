@@ -5,8 +5,9 @@ import com.wavemaker.employee.repository.AddressRepository;
 
 public class AddressRepositoryInFileImpl implements AddressRepository {
 
+
     @Override
-    public Address getAddressById(int addressId) {
+    public Address getAddressByEmpId(int empId) {
         return null;
     }
 
@@ -16,7 +17,7 @@ public class AddressRepositoryInFileImpl implements AddressRepository {
     }
 
     @Override
-    public Address deleteAddress(int addressId) {
+    public Address deleteAddressByEmpId(int empId) {
         return null;
     }
 
@@ -24,4 +25,5 @@ public class AddressRepositoryInFileImpl implements AddressRepository {
     public Address updateAddress(Address address) {
         return null;
     }
+
 }

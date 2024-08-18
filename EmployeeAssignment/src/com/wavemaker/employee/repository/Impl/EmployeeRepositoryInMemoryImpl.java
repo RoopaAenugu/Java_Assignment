@@ -44,7 +44,7 @@ public class EmployeeRepositoryInMemoryImpl implements EmployeeRepository {
         if (!employeeMap.containsKey(employee.getEmpId())) {
             throw new EmployeeNotFoundException("Employee with ID " + employee.getEmpId() + " not found.");
         }
-        employeeMap.put(employee.getEmpId(), employee); // Update existing employee
+        employeeMap.put(employee.getEmpId(), employee);
         return true;
     }
 

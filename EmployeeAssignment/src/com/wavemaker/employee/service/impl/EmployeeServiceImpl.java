@@ -2,6 +2,7 @@ package com.wavemaker.employee.service.impl;
 
 import com.wavemaker.employee.employeefactory.AddressRepositoryFactory;
 import com.wavemaker.employee.employeefactory.EmployeeRepositoryFactory;
+import com.wavemaker.employee.model.Address;
 import com.wavemaker.employee.model.Employee;
 import com.wavemaker.employee.repository.AddressRepository;
 import com.wavemaker.employee.repository.EmployeeRepository;
@@ -20,7 +21,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee getEmployeeById(int empId) {
-        return employeeRepository.getEmployeeById(empId);
+        Employee employee = employeeRepository.getEmployeeById(empId);
+        Address address = addressRepository.getAddressByEmpId(empId);
+        if (address != null) {
+            employee.setAddress(address);
+        }
+        return employee;
     }
 
     @Override
@@ -28,24 +34,35 @@ public class EmployeeServiceImpl implements EmployeeService {
         if (employee.getAddress() != null) {
             addressRepository.addAddress(employee.getAddress());
         }
-
         return employeeRepository.addEmployee(employee);
     }
 
     @Override
     public List<Employee> getAllEmployees() {
-        return employeeRepository.getAllEmployees();
+        List<Employee> employees = employeeRepository.getAllEmployees();
+        for (Employee employee : employees) {
+            Address address = addressRepository.getAddressByEmpId(employee.getEmpId());
 
+            if (address != null) {
+                employee.setAddress(address);
+            }
+        }
+        return employees;
     }
 
     @Override
     public boolean updateEmployee(Employee employee) {
+        if (employee.getAddress() != null) {
+            addressRepository.updateAddress(employee.getAddress());;
+        }
         return employeeRepository.updateEmployee(employee);
     }
 
     @Override
     public boolean deleteEmployee(Employee employee) {
+        if (employee.getAddress() != null) {
+            addressRepository.deleteAddressByEmpId(employee.getEmpId());
+        }
         return employeeRepository.deleteEmployee(employee);
-
     }
 }

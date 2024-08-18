@@ -5,6 +5,15 @@ public class Address {
     private String state;
     private String city;
     private int pincode;
+    private int empId;
+
+    public int getEmpId() {
+        return empId;
+    }
+
+    public void setEmpId(int empId) {
+        this.empId = empId;
+    }
 
     public int getAddressId() {
         return addressId;
@@ -37,6 +46,7 @@ public class Address {
     public void setPincode(int pincode) {
         this.pincode = pincode;
     }
+
     @Override
     public String toString() {
         return "Address{" +

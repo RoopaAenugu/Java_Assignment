@@ -9,4 +9,6 @@ public interface AddressRepository {
     public boolean addAddress(Address address);
     public Address deleteAddressByEmpId(int empId);
     public Address updateAddress(Address address);
+    public List<Address> readAllAddresses();
+    public boolean isAddressExistsForEmpId(int empId);
 }

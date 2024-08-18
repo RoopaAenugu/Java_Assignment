@@ -28,14 +28,15 @@ public class EmployeeController {
         while (true) {
             System.out.println("\nEmployee Management System");
             System.out.println("1. Add Employee");
-            System.out.println("2. Get Employee by ID");
+            System.out.println("2. Get Employee by empID");
             System.out.println("3. Get All Employees");
             System.out.println("4. Update Employee");
             System.out.println("5. Delete Employee");
             System.out.println("6. add Address");
             System.out.println("7.  update Address");
             System.out.println("8.  delete Address");
-            System.out.println("9. Exit");
+            System.out.println("9.  get Address by empId");
+            System.out.println("10. Exit");
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
@@ -67,6 +68,9 @@ public class EmployeeController {
                     deleteAddress(scanner);
                     break;
                 case 9:
+                    getAddressByEmpId(scanner);
+                    break;
+                case 10:
                     System.out.println("Exiting...");
                     scanner.close();
                     return;
@@ -76,7 +80,20 @@ public class EmployeeController {
         }
     }
 
-    public static void addAddress(Scanner scanner) {
+    private static void getAddressByEmpId(Scanner scanner) {
+        System.out.print("Enter Employee ID to get address: ");
+        int empId = scanner.nextInt();
+
+        Address address = addressService.getAddressByEmpId(empId);
+        if (address != null) {
+            printAddress(address);
+        } else {
+            System.out.println("Employee not found.");
+        }
+
+    }
+
+    private static void addAddress(Scanner scanner) {
         System.out.print("Enter empId you want to add: ");
         int empId = scanner.nextInt();
         Employee employee = employeeService.getEmployeeById(empId);
@@ -125,7 +142,7 @@ public class EmployeeController {
                 System.out.println("Failed to delete employee address.");
             }
         } else {
-            System.out.println("Employee not found.");
+            System.out.println("Employee address  not found.");
         }
 
     }
@@ -160,157 +177,175 @@ public class EmployeeController {
             if (addressAdded) {
                 employee.setAddress(getEmployeeAddress(scanner, "addAddress"));
             }
-            boolean added = employeeService.addEmployee(employee);
-            if (added) {
-                System.out.println("Employee added successfully.");
-            } else {
-                System.out.println("Failed to add employee.");
-            }
-        }
-        else {
+        } else {
             System.out.println("Address details were not provided.");
         }
+        boolean added = employeeService.addEmployee(employee);
+        if (added) {
+            System.out.println("Employee added successfully.");
+        } else {
+            System.out.println("Failed to add employee.");
+        }
+
     }
 
-        private static void getEmployeeById (Scanner scanner){
-            System.out.print("Enter Employee ID: ");
-            int id = scanner.nextInt();
+    private static void getEmployeeById(Scanner scanner) {
+        System.out.print("Enter Employee ID: ");
+        int id = scanner.nextInt();
 
-            Employee employee = employeeService.getEmployeeById(id);
-            if (employee != null) {
-                printEmployee(employee);
-            } else {
-                System.out.println("Employee not found.");
+        Employee employee = employeeService.getEmployeeById(id);
+        if (employee != null) {
+            printEmployee(employee);
+        } else {
+            System.out.println("Employee not found.");
+        }
+    }
+
+    private static void getAllEmployees() {
+        List<Employee> employees = employeeService.getAllEmployees();
+        if (employees.isEmpty()) {
+            System.out.println("No employees found.");
+        } else {
+            System.out.println("All Employees:");
+            for (Employee emp : employees) {
+                printEmployee(emp);
             }
         }
+    }
 
-        private static void getAllEmployees () {
-            List<Employee> employees = employeeService.getAllEmployees();
-            if (employees.isEmpty()) {
-                System.out.println("No employees found.");
-            } else {
-                System.out.println("All Employees:");
-                for (Employee emp : employees) {
-                    printEmployee(emp);
-                }
-            }
-        }
-
-        private static void updateEmployee (Scanner scanner){
-            System.out.print("Enter Employee ID to update: ");
-            int id = scanner.nextInt();
-            scanner.nextLine();
-            Employee employee = employeeService.getEmployeeById(id);
-            if (employee != null) {
-                employee = getEmployeeDetails(scanner, "update");
-                employee.setEmpId(id);
-                Address address = addressService.getAddressByEmpId(employee.getEmpId());
-                if (address != null) {
-                    address = getEmployeeAddress(scanner, "updateaddress");
-                    address.setEmpId(id);
-                }
-                employee.setAddress(address);
-                boolean updated = employeeService.updateEmployee(employee);
-                if (updated) {
-                    System.out.println("Employee updated successfully.");
-                } else {
-                    System.out.println("Failed to update employee.");
-                }
-            } else {
-                System.out.println("Employee not found.");
-            }
-        }
-
-        private static void deleteEmployee (Scanner scanner){
-            System.out.print("Enter Employee ID to delete: ");
-            int id = scanner.nextInt();
-
-            Employee employee = employeeService.getEmployeeById(id);
-            if (employee != null) {
-                boolean deleted = employeeService.deleteEmployee(employee);
-                if (deleted) {
-                    System.out.println("Employee deleted successfully.");
-                } else {
-                    System.out.println("Failed to delete employee.");
-                }
-            } else {
-                System.out.println("Employee not found.");
-            }
-        }
-
-        private static Address getEmployeeAddress (Scanner scanner, String operation){
-            int userChoice;
-            System.out.println("Do You Want To " + operation + "  Address?\n1. For Yes and 2.For No");
-            userChoice = scanner.nextInt();
-            scanner.nextLine();
-            if (userChoice == 1) {
-                Address address = new Address();
-                if (operation.equals("addAddress")) {
-                    System.out.println("Enter ID : ");
-                    int addressId = scanner.nextInt();
-                    address.setAddressId(addressId);
-
-                }
-
-                scanner.nextLine();
-                System.out.println("Enter State : ");
-                String state = scanner.nextLine();
-                System.out.println("Enter city :");
-                String city = scanner.nextLine();
-                System.out.println("Enter Pincode : ");
-                int pincode = scanner.nextInt();
-                scanner.nextLine();
-                address.setState(state);
-
-                address.setCity(city);
-                address.setPincode(pincode);
-                return address;
-            }
-            return null;
-        }
-
-        private static Employee getEmployeeDetails (Scanner scanner, String operation){
-            Employee employee = new Employee();
-            if (operation.equals("add")) {
-                System.out.print("Enter Employee ID: ");
-                int empId = scanner.nextInt();
-                employee.setEmpId(empId);
-                scanner.nextLine();
-
-            }
-
-            System.out.print("Enter Employee Name: ");
-            String name = scanner.nextLine();
-            System.out.print("Enter Employee Age: ");
-            int age = scanner.nextInt();
-            scanner.nextLine();
-            System.out.print("Enter Employee Gender ");
-            String gender = scanner.nextLine();
-            scanner.nextLine();
-
-
-            employee.setEmpName(name);
-            employee.setAge(age);
-            employee.setGender(gender);
-            return employee;
-
-
-        }
-
-        private static void printEmployee (Employee employee){
-            System.out.println("Employee Details of employeeId :" + employee.getEmpId());
-            System.out.println("ID: " + employee.getEmpId());
-            System.out.println("Name: " + employee.getEmpName());
-            System.out.println("Age: " + employee.getAge());
-            Address address = employee.getAddress();
+    private static void updateEmployee(Scanner scanner) {
+        System.out.print("Enter Employee ID to update: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        Employee employee = employeeService.getEmployeeById(id);
+        if (employee != null) {
+            employee = getEmployeeDetails(scanner, "update");
+            employee.setEmpId(id);
+            Address address = addressService.getAddressByEmpId(employee.getEmpId());
             if (address != null) {
-                System.out.println("Address ID: " + address.getAddressId());
-                System.out.println("State: " + address.getState());
-                System.out.println("City: " + address.getCity());
-                System.out.println("Pincode: " + address.getPincode());
-            } else {
-                System.out.println("Address: Not assigned");
+                address = getEmployeeAddress(scanner, "updateaddress");
+                address.setEmpId(id);
             }
+            employee.setAddress(address);
+            boolean updated = employeeService.updateEmployee(employee);
+            if (updated) {
+                System.out.println("Employee updated successfully.");
+            } else {
+                System.out.println("Failed to update employee.");
+            }
+        } else {
+            System.out.println("Employee not found.");
         }
     }
+
+    private static void deleteEmployee(Scanner scanner) {
+        System.out.print("Enter Employee ID to delete: ");
+        int id = scanner.nextInt();
+
+        Employee employee = employeeService.getEmployeeById(id);
+        if (employee != null) {
+            boolean deleted = employeeService.deleteEmployee(employee);
+            if (deleted) {
+                System.out.println("Employee deleted successfully.");
+            } else {
+                System.out.println("Failed to delete employee.");
+            }
+        } else {
+            System.out.println("Employee not found.");
+        }
+    }
+
+    private static Address getEmployeeAddress(Scanner scanner, String operation) {
+        int userChoice;
+        System.out.println("Do You Want To " + operation + "  Address?\n1. For Yes and 2.For No");
+        userChoice = scanner.nextInt();
+        scanner.nextLine();
+        if (userChoice == 1) {
+            Address address = new Address();
+            if (operation.equals("addAddress")) {
+                System.out.println("Enter addressID : ");
+                int addressId = scanner.nextInt();
+                scanner.nextLine();
+                address.setAddressId(addressId);
+
+            }
+
+            System.out.println("Enter State : ");
+            String state = scanner.nextLine();
+            System.out.println("Enter city :");
+            String city = scanner.nextLine();
+            System.out.println("Enter Pincode : ");
+            int pincode = scanner.nextInt();
+            scanner.nextLine();
+            address.setState(state);
+
+            address.setCity(city);
+            address.setPincode(pincode);
+            return address;
+        }
+        return null;
+    }
+
+    private static Employee getEmployeeDetails(Scanner scanner, String operation) {
+        Employee employee = new Employee();
+        if (operation.equals("add")) {
+            System.out.print("Enter Employee ID: ");
+            int empId = scanner.nextInt();
+            scanner.nextLine();
+            employee.setEmpId(empId);
+
+
+        }
+
+        System.out.print("Enter Employee Name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter Employee Age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Enter Employee Gender ");
+        String gender = scanner.nextLine();
+        scanner.nextLine();
+
+
+        employee.setEmpName(name);
+        employee.setAge(age);
+        employee.setGender(gender);
+        return employee;
+
+
+    }
+
+    private static void printEmployee(Employee employee) {
+        String employeeDetails = String.format(
+                "Employee Details -{ empID: %d, Name: %s, Age: %d, Address: %s }",
+                employee.getEmpId(),
+                employee.getEmpName(),
+                employee.getAge(),
+                employee.getAddress() != null ?
+                        String.format("addressID: %d, State: %s, City: %s, Pincode: %d",
+                                employee.getAddress().getAddressId(),
+                                employee.getAddress().getState(),
+                                employee.getAddress().getCity(),
+                                employee.getAddress().getPincode())
+                        : "Not assigned"
+        );
+
+        System.out.println(employeeDetails);
+    }
+
+    private static void printAddress(Address address) {
+        String addressDetails = address != null ?
+                String.format("Employee address details: {ID: %d, State: %s, City: %s, Pincode: %d}",
+                        address.getAddressId(),
+                        address.getState(),
+                        address.getCity(),
+                        address.getPincode())
+                : "Address: Not assigned";
+
+
+
+        System.out.println(addressDetails);
+
+    }
+}
 

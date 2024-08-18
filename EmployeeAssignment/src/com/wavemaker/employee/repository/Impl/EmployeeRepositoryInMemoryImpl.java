@@ -20,7 +20,7 @@ public class EmployeeRepositoryInMemoryImpl implements EmployeeRepository {
     public Employee getEmployeeById(int empId) {
         Employee employee = employeeMap.get(empId);
         if (employee == null) {
-            throw new EmployeeNotFoundException("Employee with ID " + empId + " not found.");
+            throw new EmployeeNotFoundException("Employee with ID " + empId + " not found.",404);
         }
         return employee;
     }
@@ -42,7 +42,7 @@ public class EmployeeRepositoryInMemoryImpl implements EmployeeRepository {
     @Override
     public boolean updateEmployee(Employee employee) {
         if (!employeeMap.containsKey(employee.getEmpId())) {
-            throw new EmployeeNotFoundException("Employee with ID " + employee.getEmpId() + " not found.");
+            throw new EmployeeNotFoundException("Employee with ID " + employee.getEmpId() + " not found.",404);
         }
         employeeMap.put(employee.getEmpId(), employee);
         return true;
@@ -51,7 +51,7 @@ public class EmployeeRepositoryInMemoryImpl implements EmployeeRepository {
     @Override
     public boolean deleteEmployee(Employee employee) {
         if (!employeeMap.containsKey(employee.getEmpId())) {
-            throw new EmployeeNotFoundException("Employee with ID " + employee.getEmpId() + " not found.");
+            throw new EmployeeNotFoundException("Employee with ID " + employee.getEmpId() + " not found.",404);
         }
         employeeMap.remove(employee.getEmpId());
         return true;

@@ -21,7 +21,13 @@ public class AddressRepositoryInMemoryImpl implements AddressRepository {
     @Override
     public boolean addAddress(Address address) {
         Address addedAddress = addressMap.put(address.getEmpId(),address);
-        return addedAddress != null;
+        if(addedAddress != null){
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
 
     @Override
@@ -37,4 +43,16 @@ public class AddressRepositoryInMemoryImpl implements AddressRepository {
         }
         return updatedAddress;
     }
+
+    @Override
+    public List<Address> readAllAddresses() {
+        return new ArrayList<>(addressMap.values());
+    }
+
+    @Override
+    public boolean isAddressExistsForEmpId(int empId) {
+        return addressMap.containsKey(empId);
+
+    }
+
 }

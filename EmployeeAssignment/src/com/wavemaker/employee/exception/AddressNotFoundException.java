@@ -1,10 +1,10 @@
 package com.wavemaker.employee.exception;
 
-public class EmployeeNotFoundException extends RuntimeException {
+public class AddressNotFoundException extends RuntimeException {
     private int statusCode;
     private String errorMessage;
 
-    public EmployeeNotFoundException(String errorMessage, int statusCode) {
+    public  AddressNotFoundException(String errorMessage, int statusCode) {
         super(errorMessage);
         this.errorMessage = errorMessage;
         this.statusCode = statusCode;
@@ -25,4 +25,5 @@ public class EmployeeNotFoundException extends RuntimeException {
     public void setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
     }
+
 }

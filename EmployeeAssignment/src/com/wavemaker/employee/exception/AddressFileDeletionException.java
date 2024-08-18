@@ -1,10 +1,10 @@
 package com.wavemaker.employee.exception;
 
-public class EmployeeNotFoundException extends RuntimeException {
+public class AddressFileDeletionException extends RuntimeException{
     private int statusCode;
     private String errorMessage;
 
-    public EmployeeNotFoundException(String errorMessage, int statusCode) {
+    public AddressFileDeletionException(String errorMessage, int statusCode) {
         super(errorMessage);
         this.errorMessage = errorMessage;
         this.statusCode = statusCode;

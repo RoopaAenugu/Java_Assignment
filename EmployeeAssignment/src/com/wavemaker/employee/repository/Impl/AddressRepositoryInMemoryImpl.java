@@ -4,9 +4,7 @@ import com.wavemaker.employee.model.Address;
 import com.wavemaker.employee.repository.AddressRepository;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class AddressRepositoryInMemoryImpl implements AddressRepository {
@@ -20,13 +18,8 @@ public class AddressRepositoryInMemoryImpl implements AddressRepository {
 
     @Override
     public boolean addAddress(Address address) {
-        Address addedAddress = addressMap.put(address.getEmpId(),address);
-        if(addedAddress != null){
-            return true;
-        }
-        else{
-            return false;
-        }
+        Address addedAddress = addressMap.put(address.getEmpId(), address);
+        return true;
 
     }
 

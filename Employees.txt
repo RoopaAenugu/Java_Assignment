@@ -1,2 +1,5 @@
-1,roopa,22,female
-3,tt,22,fe
+1,ee,2,e
+2,nandu,22,female
+3,roopa reddy,22,female
+5,santosh,29,male,santosh@gmail.com
+6,kushul,24,male,kushul@gmail.com

@@ -85,13 +85,14 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public boolean deleteEmployee(Employee employee) {
-        logger.info("Deleting employee: {}", employee);
-        if (employee.getAddress() != null) {
+    public boolean deleteEmployeeByEmpId(int empId) {
+        logger.info("Deleting employee emId: {}", empId);
+        Employee employee=employeeRepository.getEmployeeById(empId);
+        if (employee!=null&&employee.getAddress() != null) {
             addressRepository.deleteAddressByEmpId(employee.getEmpId());
             logger.info("Address deleted for employee ID: {}", employee.getEmpId());
         }
-        boolean result = employeeRepository.deleteEmployee(employee);
+        boolean result = employeeRepository.deleteEmployeeByEmpId(empId);
         logger.info("Employee deleted successfully: {}", result);
         return result;
     }

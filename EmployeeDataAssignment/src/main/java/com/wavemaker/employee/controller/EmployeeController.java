@@ -22,78 +22,13 @@ public class EmployeeController {
     private static boolean addressHeading;
 
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("1. In Memory Storage\n2. In File Storage\n3. In Database Storage");
-        System.out.print("Enter your option to storage: ");
-        int storageOption = scanner.nextInt();
+    public static void initializeServices(int storageOption) {
         employeeService = new EmployeeServiceImpl(storageOption);
         addressService = new AddressServiceImpl(storageOption);
         logger.info("created addressservice object");
-
-
-        while (true) {
-            System.out.println("\nEmployee Management System");
-            System.out.println("1. Add Employee");
-            System.out.println("2. Get Employee by empID");
-            System.out.println("3. Get All Employees");
-            System.out.println("4. Update Employee");
-            System.out.println("5. Delete Employee");
-            System.out.println("6. add Address");
-            System.out.println("7. update Address");
-            System.out.println("8. delete Address");
-            System.out.println("9. get Address by empId");
-            System.out.println("10  search by email");
-            System.out.println("11. Exit");
-            System.out.print("Enter your choice: ");
-
-            int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline left-over
-            logger.info("user enter the choice for  storage{}", choice);
-
-            switch (choice) {
-                case 1:
-                    addEmployee(scanner);
-                    break;
-                case 2:
-                    getEmployeeById(scanner);
-                    break;
-                case 3:
-                    getAllEmployees();
-                    break;
-                case 4:
-                    updateEmployee(scanner);
-                    break;
-                case 5:
-                    deleteEmployee(scanner);
-                    break;
-                case 6:
-                    addAddress(scanner);
-                    break;
-                case 7:
-                    updateAddress(scanner);
-                    break;
-                case 8:
-                    deleteAddress(scanner);
-                    break;
-                case 9:
-                    getAddressByEmpId(scanner);
-                    break;
-                case 10:
-                    getEmployeeByEmail(scanner);
-                    break;
-                case 11:
-                    System.out.println("Exiting...");
-                    scanner.close();
-                    return;
-                default:
-                    System.out.println("Invalid option. Please choose again.");
-            }
-        }
     }
 
-    private static void getAddressByEmpId(Scanner scanner) {
+    public static void getAddressByEmpId(Scanner scanner) {
         System.out.print("Enter Employee ID to get address: ");
         int empId = scanner.nextInt();
 
@@ -106,7 +41,7 @@ public class EmployeeController {
 
     }
 
-    private static void addAddress(Scanner scanner) {
+    public static void addAddress(Scanner scanner) {
         System.out.print("Enter empId you want to add: ");
         int empId = scanner.nextInt();
         Employee employee = employeeService.getEmployeeById(empId);
@@ -116,17 +51,16 @@ public class EmployeeController {
                 Address address = getEmployeeAddress(scanner, "addAddress");
                 if (address != null) {
                     address.setEmpId(empId);
+                    boolean added = addressService.addAddress(address);
+                    if (added) {
+                        System.out.println("address added successfully");
+
+                    } else {
+                        System.out.println("Failed to add address.");
+                    }
 
                 }
 
-
-                boolean added = addressService.addAddress(address);
-                if (added) {
-                    System.out.println("address added successfully");
-
-                } else {
-                    System.out.println("Failed to add address.");
-                }
             } else {
                 System.out.println("Employee address already exists.");
             }
@@ -136,7 +70,7 @@ public class EmployeeController {
     }
 
 
-    private static void deleteAddress(Scanner scanner) {
+    public static void deleteAddress(Scanner scanner) {
         System.out.print("Enter Emp ID to delete: ");
         int empId = scanner.nextInt();
 
@@ -163,7 +97,7 @@ public class EmployeeController {
     }
 
 
-    private static void updateAddress(Scanner scanner) {
+    public static void updateAddress(Scanner scanner) {
         System.out.print("Enter emp ID to update: ");
         int empId = scanner.nextInt();
         scanner.nextLine();
@@ -191,7 +125,7 @@ public class EmployeeController {
     }
 
 
-    private static void addEmployee(Scanner scanner) {
+    public static void addEmployee(Scanner scanner) {
         Employee employee = getEmployeeDetails(scanner, "add");
         Address address = getEmployeeAddress(scanner, "addAddress");
         if (employee != null) {
@@ -206,7 +140,7 @@ public class EmployeeController {
 
     }
 
-    private static void getEmployeeById(Scanner scanner) {
+    public static void getEmployeeById(Scanner scanner) {
         System.out.print("Enter Employee ID: ");
         int id = scanner.nextInt();
 
@@ -219,7 +153,7 @@ public class EmployeeController {
         }
     }
 
-    private static void getAllEmployees() {
+    public static void getAllEmployees() {
         List<Employee> employees = employeeService.getAllEmployees();
         if (employees.isEmpty()) {
             System.out.println("No employees found.");
@@ -232,7 +166,7 @@ public class EmployeeController {
         }
     }
 
-    private static void updateEmployee(Scanner scanner) {
+    public static void updateEmployee(Scanner scanner) {
         System.out.print("Enter Employee ID to update: ");
         int empId = scanner.nextInt();
         scanner.nextLine();
@@ -272,13 +206,14 @@ public class EmployeeController {
         }
     }
 
-    private static void deleteEmployee(Scanner scanner) {
+    public static void deleteEmployee(Scanner scanner) {
         System.out.print("Enter Employee ID to delete: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
 
         Employee employee = employeeService.getEmployeeById(id);
         if (employee != null) {
-            boolean deleted = employeeService.deleteEmployee(employee);
+            boolean deleted = employeeService.deleteEmployeeByEmpId(id);
             if (deleted) {
                 System.out.println("Employee deleted successfully.");
             } else {
@@ -289,12 +224,13 @@ public class EmployeeController {
         }
     }
 
-    private static void getEmployeeByEmail(Scanner scanner) {
+    public static void getEmployeeByEmail(Scanner scanner) {
         String email;
         System.out.println("enter email to search employee");
         email = scanner.nextLine();
         Employee employee = employeeService.getEmployeeByEmail(email);
         if (employee != null) {
+            employeeHeadings = false;
             printEmployee(employee);
         } else {
             System.out.println("employee not found for" + email);
@@ -363,29 +299,31 @@ public class EmployeeController {
 
     }
 
-
     private static void printEmployee(Employee employee) {
         // Define table headers
         if (!employeeHeadings) {
             // Print the header row (only once)
-            System.out.printf("%-10s %-20s %-5s %-30s %-50s%n",
-                    "Emp_Id", "Name", "Age", "Email", "Address");
-            System.out.println("-------------------------------------------------------------------------------------------------------");
+            System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.printf("%-10s %-20s %-5s %-10s %-30s %-50s%n",
+                    "Emp_Id", "Name", "Age", "Gender", "Email", "Address");
+            System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------");
             employeeHeadings = true;
         }
 
         // Print the employee details
-        System.out.printf("%-10d %-20s %-5d %-30s %-50s%n",
+        System.out.printf("%-10d %-20s %-5d %-10s %-30s %-50s%n",
                 employee.getEmpId(),
                 employee.getEmpName(),
                 employee.getAge(),
+                employee.getGender(),
                 employee.getEmail(),
                 employee.getAddress() != null ?
-                        String.format("ID: %d, State: %s, City: %s, Pincode: %d",
+                        String.format("ID: %d, State: %s, City: %s, Pincode: %d, Emp_Id: %d",
                                 employee.getAddress().getAddressId(),
                                 employee.getAddress().getState(),
                                 employee.getAddress().getCity(),
-                                employee.getAddress().getPincode())
+                                employee.getAddress().getPincode(),
+                                employee.getAddress().getEmpId())
                         : "Not assigned"
         );
     }

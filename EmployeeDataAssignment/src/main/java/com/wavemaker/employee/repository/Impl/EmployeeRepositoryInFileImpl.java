@@ -133,7 +133,7 @@ public class EmployeeRepositoryInFileImpl implements EmployeeRepository {
     }
 
     @Override
-    public boolean deleteEmployee(Employee employee) {
+    public boolean deleteEmployeeByEmpId(int empId) {
         BufferedReader reader = null;
         BufferedWriter writer = null;
         File tempFile = new File(file.getAbsolutePath().replace(".txt", "_temp.txt"));
@@ -147,7 +147,7 @@ public class EmployeeRepositoryInFileImpl implements EmployeeRepository {
             while ((line = reader.readLine()) != null) {
                 String[] fields = line.split(",");
                 int currentEmpId = Integer.parseInt(fields[0]);
-                if (currentEmpId == employee.getEmpId()) {
+                if (currentEmpId == empId) {
                     isEmployeeDeleted=true;
 
                     continue;

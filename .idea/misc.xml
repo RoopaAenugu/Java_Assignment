@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/TaskApplication/pom.xml" />
         <option value="$PROJECT_DIR$/EmployeeDataAssignment/pom.xml" />
+        <option value="$PROJECT_DIR$/TodoWebApp/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -3778,3 +3778,1105 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 2024-08-21 07:39:00 [main] WARN  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - No address found for employee ID: 6
 2024-08-21 07:39:00 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
 2024-08-21 07:39:00 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 6
+2024-08-21 07:53:30 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 3
+2024-08-21 07:53:30 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 3
+2024-08-21 07:53:30 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 07:53:31 [main] INFO  com.wavemaker.employee.controller.EmployeeController - user enter the choice for  storage3
+2024-08-21 07:53:31 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 07:53:32 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 1
+2024-08-21 07:53:32 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 3
+2024-08-21 07:53:32 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 08:47:06 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 3
+2024-08-21 08:47:06 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 3
+2024-08-21 08:47:06 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 08:47:14 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage1
+2024-08-21 08:47:52 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee added successfully: 9
+2024-08-21 08:47:52 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address added for employee ID: 0
+2024-08-21 08:47:55 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 08:47:55 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 08:47:55 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 1
+2024-08-21 08:47:55 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 3
+2024-08-21 08:47:55 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 08:47:55 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 9
+2024-08-21 08:48:04 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage10
+2024-08-21 08:48:13 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with email: 
+2024-08-21 08:48:13 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No employee found with email: 
+2024-08-21 08:50:44 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 3
+2024-08-21 08:50:44 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 3
+2024-08-21 08:50:44 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 08:50:49 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 08:50:49 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 08:50:49 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 1
+2024-08-21 08:50:49 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 3
+2024-08-21 08:50:49 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 08:50:49 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 9
+2024-08-21 08:50:59 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage10
+2024-08-21 08:51:18 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with email: nandu@gmail.com
+2024-08-21 08:51:18 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 1
+2024-08-21 08:53:07 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 08:53:07 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 08:53:07 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 08:53:07 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 08:53:09 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 08:53:09 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 08:53:09 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 08:53:09 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 08:53:09 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 08:53:09 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 08:53:09 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@1c5920df
+2024-08-21 08:53:09 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@17f9d882
+2024-08-21 08:53:09 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-21 08:53:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 08:53:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 08:53:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 08:53:09 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:53:09 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 08:53:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 08:53:09 [main] WARN  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - No address found for employee ID: 6
+2024-08-21 08:53:09 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:53:09 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 6
+2024-08-21 08:53:18 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage6
+2024-08-21 08:53:22 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 6
+2024-08-21 08:53:22 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 6
+2024-08-21 08:53:22 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 08:53:22 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 08:53:22 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 08:53:22 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 6
+2024-08-21 08:53:22 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@2cb4893b
+2024-08-21 08:53:22 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:53:22 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 08:53:22 [main] WARN  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - No address found for employee ID: 6
+2024-08-21 08:53:22 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:53:22 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 6
+2024-08-21 08:55:57 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 08:55:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 08:55:57 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 08:55:57 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 08:55:58 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 08:55:58 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 08:55:58 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 08:55:58 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 08:55:58 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 08:55:58 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 08:55:58 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@1c5920df
+2024-08-21 08:55:58 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@17f9d882
+2024-08-21 08:55:58 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-21 08:55:58 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 08:55:58 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 08:55:58 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 08:55:58 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:55:58 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 08:55:58 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 08:55:58 [main] WARN  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - No address found for employee ID: 6
+2024-08-21 08:55:58 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:55:58 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 6
+2024-08-21 08:56:04 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage6
+2024-08-21 08:56:06 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 6
+2024-08-21 08:56:06 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 6
+2024-08-21 08:56:06 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 08:56:06 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 08:56:06 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 08:56:06 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 6
+2024-08-21 08:56:06 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@2cb4893b
+2024-08-21 08:56:06 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:56:06 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 08:56:06 [main] WARN  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - No address found for employee ID: 6
+2024-08-21 08:56:06 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:56:06 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 6
+2024-08-21 08:58:15 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 08:58:15 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 08:58:15 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 08:58:15 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 08:58:21 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 08:58:21 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 08:58:21 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 08:58:21 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 08:58:21 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 08:58:21 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 08:58:21 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@79e4c792
+2024-08-21 08:58:21 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@196a42c3
+2024-08-21 08:58:21 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-21 08:58:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 08:58:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 08:58:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 08:58:21 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:58:21 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 08:58:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 08:58:21 [main] WARN  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - No address found for employee ID: 6
+2024-08-21 08:58:21 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:58:21 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 6
+2024-08-21 08:58:30 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage6
+2024-08-21 08:58:31 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 6
+2024-08-21 08:58:31 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 6
+2024-08-21 08:58:31 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 08:58:31 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 08:58:31 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 08:58:31 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 6
+2024-08-21 08:58:31 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@5b218417
+2024-08-21 08:58:31 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:58:31 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 08:58:31 [main] WARN  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - No address found for employee ID: 6
+2024-08-21 08:58:31 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:58:31 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 6
+2024-08-21 08:59:08 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage6
+2024-08-21 08:59:10 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 6
+2024-08-21 08:59:10 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 6
+2024-08-21 08:59:10 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 08:59:10 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 08:59:10 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 08:59:10 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 6
+2024-08-21 08:59:10 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@645aa696
+2024-08-21 08:59:10 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:59:10 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 08:59:10 [main] WARN  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - No address found for employee ID: 6
+2024-08-21 08:59:10 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:59:10 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 6
+2024-08-21 08:59:25 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Adding new address for employee ID: 6
+2024-08-21 08:59:25 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Adding address for employee ID: 6
+2024-08-21 08:59:25 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address for employee ID: 6 added successfully
+2024-08-21 08:59:25 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-21 08:59:25 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Address added successfully: true
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 08:59:27 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 08:59:27 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 08:59:27 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@6e9a5ed8
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@7e057f43
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 08:59:27 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 08:59:27 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 08:59:27 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 10:08:24 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 10:08:24 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 10:08:24 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 10:08:24 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 10:08:25 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 10:08:25 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 10:08:25 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@79e4c792
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@196a42c3
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 10:08:25 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 10:08:25 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:08:25 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 10:08:32 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 10:08:32 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 10:08:32 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@5b218417
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@645aa696
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 10:08:32 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 10:08:32 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:08:32 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 10:43:08 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 10:43:08 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 10:43:08 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 10:43:08 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 10:43:31 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 10:43:31 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 10:43:31 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4b013c76
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@53fb3dab
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 10:43:31 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 10:43:31 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:43:31 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 10:43:45 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage1
+2024-08-21 10:44:37 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Adding new employee: com.wavemaker.employee.model.Employee@72035809
+2024-08-21 10:44:37 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Generated new employee ID: 7
+2024-08-21 10:44:37 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee with ID: 7 added successfully
+2024-08-21 10:44:37 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-21 10:44:37 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee added successfully: 7
+2024-08-21 10:44:37 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Adding address for employee ID: 7
+2024-08-21 10:44:37 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address for employee ID: 7 added successfully
+2024-08-21 10:44:37 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-21 10:44:37 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address added for employee ID: 7
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 10:44:39 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 10:44:39 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 10:44:39 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@31ea9581
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@231f98ef
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@7c137fd5
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 3 employees found
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 10:44:39 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 10:44:39 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-21 10:44:39 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:44:39 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 10:44:56 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 3
+2024-08-21 10:44:56 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 3
+2024-08-21 10:44:56 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 10:44:58 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 10:44:58 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 10:44:59 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 1
+2024-08-21 10:44:59 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 3
+2024-08-21 10:44:59 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 10:44:59 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 9
+2024-08-21 10:49:40 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 10:49:40 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 10:49:40 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 10:49:40 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 10:49:41 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 10:49:41 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 10:49:41 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@79e4c792
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@196a42c3
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4c60d6e9
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 3 employees found
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 10:49:41 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 10:49:41 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-21 10:49:41 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:49:41 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 10:52:14 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 10:52:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 10:52:14 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 10:52:14 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 10:52:15 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 10:52:15 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 10:52:15 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@79e4c792
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@196a42c3
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4c60d6e9
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 3 employees found
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 10:52:15 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 10:52:15 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-21 10:52:15 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:52:15 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 10:52:35 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage1
+2024-08-21 10:52:58 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Adding new employee: com.wavemaker.employee.model.Employee@645aa696
+2024-08-21 10:52:58 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Generated new employee ID: 8
+2024-08-21 10:52:58 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee with ID: 8 added successfully
+2024-08-21 10:52:58 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-21 10:52:58 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee added successfully: 8
+2024-08-21 10:52:58 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Adding address for employee ID: 8
+2024-08-21 10:52:58 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address for employee ID: 8 added successfully
+2024-08-21 10:52:58 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-21 10:52:58 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address added for employee ID: 8
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 10:53:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 10:53:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 10:53:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@5ddeb7cb
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@70ed52de
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@496bc455
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@59402b8f
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 4 employees found
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 10:53:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 10:53:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-21 10:53:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 8
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 8
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=9, state='ap', city='vizag', pincode=765432}
+2024-08-21 10:53:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:53:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 8
+2024-08-21 10:55:20 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 10:55:20 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 10:55:20 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 10:55:20 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 10:55:21 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 10:55:21 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 10:55:21 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@79e4c792
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@196a42c3
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4c60d6e9
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@15043a2f
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 4 employees found
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 10:55:21 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 10:55:21 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-21 10:55:21 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 8
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 8
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=9, state='ap', city='vizag', pincode=765432}
+2024-08-21 10:55:21 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 10:55:21 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 8
+2024-08-21 11:04:13 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 11:04:13 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 11:04:13 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 11:04:13 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 11:04:14 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 11:04:14 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 11:04:14 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@79e4c792
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@196a42c3
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4c60d6e9
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@15043a2f
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 4 employees found
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 11:04:14 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 11:04:14 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-21 11:04:14 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 8
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 8
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=9, state='ap', city='vizag', pincode=765432}
+2024-08-21 11:04:14 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 11:04:14 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 8
+2024-08-21 11:06:56 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 11:06:56 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 11:06:56 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 11:06:56 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 11:06:57 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 11:06:57 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 11:06:57 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@3a7442c7
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4be29ed9
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@548d708a
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4b013c76
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 4 employees found
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 11:06:57 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 11:06:57 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-21 11:06:57 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 8
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 8
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=9, state='ap', city='vizag', pincode=765432}
+2024-08-21 11:06:57 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 11:06:57 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 8
+2024-08-21 12:03:50 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 12:03:50 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 12:03:50 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 12:03:50 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 12:03:52 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 12:03:52 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 12:03:52 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@17f9d882
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@79e4c792
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@196a42c3
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4c60d6e9
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 4 employees found
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 12:03:52 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 12:03:52 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-21 12:03:52 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 8
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 8
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=9, state='ap', city='vizag', pincode=765432}
+2024-08-21 12:03:52 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 12:03:52 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 8
+2024-08-21 12:09:22 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 3
+2024-08-21 12:09:22 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 3
+2024-08-21 12:09:22 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 12:09:44 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 12:09:44 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 12:09:44 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 1
+2024-08-21 12:09:45 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 3
+2024-08-21 12:09:45 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 12:09:45 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 9
+2024-08-21 12:10:20 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage10
+2024-08-21 12:10:39 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with email: roopa@gmail.com
+2024-08-21 12:10:39 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 3
+2024-08-21 12:10:47 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage10
+2024-08-21 12:10:56 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with email: roo@gmail.com
+2024-08-21 12:10:56 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No employee found with email: roo@gmail.com
+2024-08-21 12:11:24 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage4
+2024-08-21 12:11:35 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 1
+2024-08-21 12:11:35 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 1
+2024-08-21 12:11:57 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Fetching address for employee ID: 1
+2024-08-21 12:11:57 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Address found for employee ID: 1
+2024-08-21 12:12:04 [main] WARN  com.wavemaker.employee.controller.EmployeeController - address is not updated
+2024-08-21 12:12:04 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Updating employee: com.wavemaker.employee.model.Employee@4f2613d1
+2024-08-21 12:12:04 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee updated successfully: true
+2024-08-21 12:12:09 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 12:12:09 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 12:12:10 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 1
+2024-08-21 12:12:10 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 3
+2024-08-21 12:12:10 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 12:12:10 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 9
+2024-08-21 18:15:46 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-21 18:15:46 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-21 18:15:46 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-21 18:15:46 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 18:15:47 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 18:15:47 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 18:15:47 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@1c5920df
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@17f9d882
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@79e4c792
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@196a42c3
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 4 employees found
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 18:15:47 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 18:15:47 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-21 18:15:47 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 8
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 8
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=9, state='ap', city='vizag', pincode=765432}
+2024-08-21 18:15:47 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 18:15:47 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 8
+2024-08-21 18:15:55 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage5
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 8
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 8
+2024-08-21 18:16:02 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 18:16:02 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 18:16:02 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 8
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@5b218417
+2024-08-21 18:16:02 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 8
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 8
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=9, state='ap', city='vizag', pincode=765432}
+2024-08-21 18:16:02 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 8
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Deleting employee emId: 8
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 8
+2024-08-21 18:16:02 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 18:16:02 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 18:16:02 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 8
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@645aa696
+2024-08-21 18:16:02 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 18:16:02 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 18:16:02 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-21 18:16:02 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee deleted successfully: true
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-21 18:16:06 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-21 18:16:06 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-21 18:16:06 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@16eb3ea3
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@273444fe
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@33bc72d1
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 3 employees found
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-21 18:16:06 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-21 18:16:06 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-21 18:16:06 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-21 18:16:06 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 07:45:11 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-22 07:45:11 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-22 07:45:11 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-22 07:45:11 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-22 07:45:15 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage1
+2024-08-22 07:45:39 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-22 07:45:39 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-22 07:45:39 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-22 07:45:39 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-22 07:45:47 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:45:47 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:45:47 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4b013c76
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@53fb3dab
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@cb0755b
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 3 employees found
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-22 07:45:47 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-22 07:45:47 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-22 07:45:47 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:45:47 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 07:46:14 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage1
+2024-08-22 07:46:55 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Adding new employee: com.wavemaker.employee.model.Employee@909217e
+2024-08-22 07:46:55 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Generated new employee ID: 8
+2024-08-22 07:46:55 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee with ID: 8 added successfully
+2024-08-22 07:46:55 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-22 07:46:55 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee added successfully: 8
+2024-08-22 07:46:55 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Adding address for employee ID: 8
+2024-08-22 07:46:55 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address for employee ID: 8 added successfully
+2024-08-22 07:46:55 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-22 07:46:55 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address added for employee ID: 8
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-22 07:47:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:47:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:47:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@231f98ef
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@7c137fd5
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@183ec003
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@7d9d0818
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 4 employees found
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-22 07:47:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-22 07:47:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-22 07:47:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 8
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 8
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=9, state='ap', city='vizag', pincode=765432}
+2024-08-22 07:47:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:47:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 8
+2024-08-22 07:48:17 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage5
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 8
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 8
+2024-08-22 07:48:20 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:48:20 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:48:20 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 8
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@221a3fa4
+2024-08-22 07:48:20 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 8
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 8
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=9, state='ap', city='vizag', pincode=765432}
+2024-08-22 07:48:20 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 8
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Deleting employee emId: 8
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 8
+2024-08-22 07:48:20 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:48:20 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:48:20 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 8
+2024-08-22 07:48:20 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@451001e5
+2024-08-22 07:48:20 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:48:20 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:48:20 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-22 07:48:48 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 3
+2024-08-22 07:48:48 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 3
+2024-08-22 07:48:48 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-22 07:48:53 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage1
+2024-08-22 07:49:21 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee added successfully: 14
+2024-08-22 07:49:31 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 07:49:31 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 07:49:31 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 3
+2024-08-22 07:49:31 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 07:49:31 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 9
+2024-08-22 07:49:31 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 10
+2024-08-22 07:49:31 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 11
+2024-08-22 07:49:31 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 12
+2024-08-22 07:49:31 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 13
+2024-08-22 07:49:31 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 14
+2024-08-22 07:50:29 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage5
+2024-08-22 07:50:34 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 14
+2024-08-22 07:50:35 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 14
+2024-08-22 07:50:35 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Deleting employee emId: 14
+2024-08-22 07:50:35 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee deleted successfully: true
+2024-08-22 07:50:41 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 07:50:41 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 07:50:41 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 3
+2024-08-22 07:50:41 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 07:50:41 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 9
+2024-08-22 07:50:41 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 10
+2024-08-22 07:50:41 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 11
+2024-08-22 07:50:41 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 12
+2024-08-22 07:50:41 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 13
+2024-08-22 07:50:58 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-22 07:50:58 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-22 07:50:58 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-22 07:50:58 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-22 07:51:05 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:51:05 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:51:05 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@3a7442c7
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4be29ed9
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@548d708a
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4b013c76
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 4 employees found
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-22 07:51:05 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-22 07:51:05 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-22 07:51:05 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 8
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 8
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=9, state='ap', city='vizag', pincode=765432}
+2024-08-22 07:51:05 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:51:05 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 8
+2024-08-22 07:51:15 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage5
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 7
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 7
+2024-08-22 07:51:26 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:51:26 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:51:26 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 7
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@5afa3c9
+2024-08-22 07:51:26 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-22 07:51:26 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Deleting employee emId: 7
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 7
+2024-08-22 07:51:26 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:51:26 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:51:26 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 7
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@72035809
+2024-08-22 07:51:26 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:51:26 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:51:26 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-22 07:51:26 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee deleted successfully: true
+2024-08-22 07:52:34 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage5
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 8
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 8
+2024-08-22 07:52:40 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:52:40 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:52:40 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 8
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@606e4010
+2024-08-22 07:52:40 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 8
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 8
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=9, state='ap', city='vizag', pincode=765432}
+2024-08-22 07:52:40 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 8
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Deleting employee emId: 8
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 8
+2024-08-22 07:52:40 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:52:40 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:52:40 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 8
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@8458f04
+2024-08-22 07:52:40 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:52:40 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:52:40 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-22 07:52:40 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee deleted successfully: true
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-22 07:52:42 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:52:42 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:52:42 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@48075da3
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@68c9133c
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-22 07:52:42 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-22 07:52:42 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:52:42 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-22 07:53:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:53:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:53:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@7a35b0f5
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@5e2c3d18
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-22 07:53:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-22 07:53:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:53:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-22 07:53:13 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage1
+2024-08-22 07:53:40 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Adding new employee: com.wavemaker.employee.model.Employee@2cb4893b
+2024-08-22 07:53:40 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Generated new employee ID: 7
+2024-08-22 07:53:40 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee with ID: 7 added successfully
+2024-08-22 07:53:40 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-22 07:53:40 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee added successfully: 7
+2024-08-22 07:53:40 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Adding address for employee ID: 7
+2024-08-22 07:53:40 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address for employee ID: 7 added successfully
+2024-08-22 07:53:40 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-22 07:53:40 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address added for employee ID: 7
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-22 07:53:42 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:53:42 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:53:42 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@2b40ff9c
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@3e08ff24
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4d1c005e
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 3 employees found
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-22 07:53:42 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-22 07:53:42 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-22 07:53:42 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:53:42 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-22 07:54:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:54:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:54:01 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@3a7442c7
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@4be29ed9
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@548d708a
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 3 employees found
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-22 07:54:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-22 07:54:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-22 07:54:01 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:54:01 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 07:54:08 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage5
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 5
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 5
+2024-08-22 07:54:13 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:54:13 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:54:13 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 5
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@72cc7e6f
+2024-08-22 07:54:13 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 5
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 5
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=5, state='telangana', city='hyderabad', pincode=890765}
+2024-08-22 07:54:13 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 5
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Deleting employee emId: 5
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 5
+2024-08-22 07:54:13 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:54:13 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:54:13 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 5
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@5afa3c9
+2024-08-22 07:54:13 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:54:13 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:54:13 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee deleted successfully: true
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-22 07:54:13 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 07:54:13 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 07:54:13 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@18271936
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@606e4010
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-22 07:54:13 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-22 07:54:13 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 07:54:13 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 08:03:44 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 3
+2024-08-22 08:03:44 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 3
+2024-08-22 08:03:44 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-22 08:03:50 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 08:03:50 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 08:03:51 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 3
+2024-08-22 08:03:51 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 08:03:51 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 9
+2024-08-22 08:03:51 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 10
+2024-08-22 08:03:51 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 11
+2024-08-22 08:03:51 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 12
+2024-08-22 08:03:51 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 13
+2024-08-22 08:03:54 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage11
+2024-08-22 08:04:09 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 2
+2024-08-22 08:04:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address file initialized at: C:\Users\roopaa_700059\IdeaProjects\Java_Assignments\address.txt
+2024-08-22 08:04:09 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 2
+2024-08-22 08:04:09 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-22 08:04:11 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 08:04:11 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 08:04:11 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@7161d8d1
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@74e28667
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-22 08:04:11 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 6
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-22 08:04:11 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 08:04:11 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 08:05:03 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage8
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Fetching address for employee ID: 6
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 6
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-22 08:05:09 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Address found for employee ID: 6
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Deleting address for employee ID: 6
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Deleting address for employee ID: 6
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found and marked for deletion: Address{addressId=7, state='Andhra Pradesh', city='vizag', pincode=876544}
+2024-08-22 08:05:09 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 08:05:09 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Renaming temporary file to original file name
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address for employee ID: 6 deleted successfully
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Address deleted successfully for employee ID: 6
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with ID: 6
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching employee with ID: 6
+2024-08-22 08:05:09 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 08:05:09 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 08:05:09 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee found with ID: 6
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@28261e8e
+2024-08-22 08:05:09 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 08:05:09 [main] WARN  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - No address found for employee ID: 6
+2024-08-22 08:05:09 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 08:05:09 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 6
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Updating employee: com.wavemaker.employee.model.Employee@28261e8e
+2024-08-22 08:05:09 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 08:05:09 [main] DEBUG com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - BufferedWriter closed successfully
+2024-08-22 08:05:09 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Employee updated successfully: true
+2024-08-22 08:05:11 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 08:05:11 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 08:05:11 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Fetching all employees
+2024-08-22 08:05:11 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 1,ee,2,e
+2024-08-22 08:05:11 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 2,nandu,22,female
+2024-08-22 08:05:11 [main] WARN  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Malformed line skipped: 3,roopa reddy,22,female
+2024-08-22 08:05:11 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@cc43f62
+2024-08-22 08:05:11 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Employee object created: com.wavemaker.employee.model.Employee@5b218417
+2024-08-22 08:05:11 [main] INFO  com.wavemaker.employee.repository.Impl.EmployeeRepositoryInFileImpl - Total 2 employees found
+2024-08-22 08:05:11 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 6
+2024-08-22 08:05:11 [main] WARN  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - No address found for employee ID: 6
+2024-08-22 08:05:11 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 08:05:11 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 6
+2024-08-22 08:05:11 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Fetching address for employee ID: 7
+2024-08-22 08:05:11 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address found for employee ID: 7
+2024-08-22 08:05:11 [main] INFO  com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - Address object created: Address{addressId=8, state='telangana', city='hyderabad', pincode=123456}
+2024-08-22 08:05:11 [main] DEBUG com.wavemaker.employee.repository.Impl.AddressRepositoryInFileImpl - BufferedReader closed successfully
+2024-08-22 08:05:11 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 13:46:23 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Initializing EmployeeServiceImpl with option: 3
+2024-08-22 13:46:23 [main] INFO  com.wavemaker.employee.service.impl.AddressServiceImpl - Initializing AddressServiceImpl with option: 3
+2024-08-22 13:46:23 [main] INFO  com.wavemaker.employee.controller.EmployeeController - created addressservice object
+2024-08-22 13:46:26 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage10
+2024-08-22 13:46:33 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with email: roopa@gmail.com
+2024-08-22 13:46:33 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 3
+2024-08-22 13:46:40 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage10
+2024-08-22 13:46:48 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching employee with email: kushul@gmail.com
+2024-08-22 13:46:48 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 9
+2024-08-22 13:47:03 [main] INFO  com.wavemaker.employee.client.EmployeeClient - user enter the choice for  storage3
+2024-08-22 13:47:03 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Fetching all employees
+2024-08-22 13:47:03 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 3
+2024-08-22 13:47:03 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 7
+2024-08-22 13:47:03 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 9
+2024-08-22 13:47:03 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 10
+2024-08-22 13:47:03 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 11
+2024-08-22 13:47:03 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 13
+2024-08-22 13:47:03 [main] INFO  com.wavemaker.employee.service.impl.EmployeeServiceImpl - Address found and set for employee ID: 15
+2024-08-22 13:47:03 [main] WARN  com.wavemaker.employee.service.impl.EmployeeServiceImpl - No address found for employee ID: 16

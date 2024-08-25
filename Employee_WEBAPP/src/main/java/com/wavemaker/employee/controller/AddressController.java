@@ -75,23 +75,19 @@ public class AddressController extends HttpServlet {
         String cookieValue = CookieUserHolder.getCookieValue("auth_cookie", req);
         if (adminSession.getAttribute(cookieValue) != null) {
             String empIdStr = req.getParameter("empId");
-
             if (empIdStr == null || empIdStr.isEmpty()) {
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
                 writeResponse(resp, "Missing or invalid empId.");
                 return;
             }
-
             try {
                 int empId = Integer.parseInt(empIdStr);
-
                 Address address = addressService.getAddressByEmpId(empId);
                 if (address == null) {
                     resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
                     writeResponse(resp, "Address not found.");
                     return;
                 }
-
                 Address deleted = addressService.deleteAddressByEmpId(empId);
                 if (deleted != null) {
                     resp.setStatus(HttpServletResponse.SC_OK);

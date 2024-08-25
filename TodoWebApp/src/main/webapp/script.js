@@ -1,398 +1,267 @@
+// Elements
+const apiUrl = 'http://localhost:8080/TodoWebApp/api/todos';
+console.log(apiUrl);
+fetchTodos();
 let todoitemcontainer = document.getElementById("todoItemsContainer");
 let buttonclick = document.getElementById("addListElement");
 let savebutton = document.getElementById("saveButton");
 let themeToggleButton = document.getElementById("themeToggleButton");
 let searchIcon = document.getElementById("search-icon");
 let result = document.getElementById("search-result");
-let sourceOrder=document.getElementById("sourceorder");
-result.innerHTML = todoitemcontainer.innerHTML;
-let search=document.getElementById("search-input");
-let subtasks=[];
+let sourceOrder = document.getElementById("sourceorder");
+let search = document.getElementById("search-input");
+let fileInput = document.getElementById("fileInput");
+let modal = document.getElementById("editModal");
+let editForm = document.getElementById("editForm");
+let currentEditId = null;
+let closeModal = document.querySelector(".close");
+let importButton = document.getElementById("import");
+
+// Priority Order
 const priorityOrder = {
     "High": 1,
     "Medium": 2,
     "Low": 3
 };
+
+// Todo List Array
+let todoList = [];
+
+// Sort Todo List Function
 function sortTodoList(sourceValue) {
     if (sourceValue.toLowerCase() === 'priority') {
         todoList.sort((a, b) => {
-            const priorityComparison = priorityOrder[a.priority] - priorityOrder[b.priority];
+            const priorityComparison = priorityOrder[a.taskPriority] - priorityOrder[b.taskPriority];
             if (priorityComparison !== 0) {
                 return priorityComparison;
             }
-            const dateTimeA = new Date(`${a.date}T${a.time}`);
-            const dateTimeB = new Date(`${b.date}T${b.time}`);
+            const dateTimeA = new Date(`${a.taskDueDate}T${a.taskDueTime}`);
+            const dateTimeB = new Date(`${b.taskDueDate}T${b.taskDueTime}`);
             return dateTimeA - dateTimeB;
         });
     } else if (sourceValue.toLowerCase() === 'date') {
         todoList.sort((a, b) => {
-            const dateTimeA = new Date(`${a.date}T${a.time}`);
-            const dateTimeB = new Date(`${b.date}T${b.time}`);
+            const dateTimeA = new Date(`${a.taskDueDate}T${a.taskDueTime}`);
+            const dateTimeB = new Date(`${b.taskDueDate}T${b.taskDueTime}`);
             return dateTimeA - dateTimeB;
         });
     }
 }
-search.addEventListener("input", function() {
-    let value = document.getElementById("search-input").value.toLowerCase().trim();
+
+// Search Functionality
+searchIcon.addEventListener("click", function () {
+    let taskName = search.value.toLowerCase().trim();
     todoitemcontainer.innerHTML = '';
-    if (value === "") {
-        todoList.forEach(todo => create(todo));
+
+    if (taskName === "") {
+        renderTodoList();
     } else {
-        let foundItems = [];
-        todoList.forEach(todo => {
-            if (todo.text.toLowerCase() === value) {
-                foundItems.push(todo);
-            }
-            if (Array.isArray(todo.subtasks)) {
-                let matchingSubtasks = todo.subtasks.filter(sub => sub.text.toLowerCase() === value);
-                if (matchingSubtasks.length > 0) {
-                    foundItems.push(todo);
-                }
-            }
-        });
-        if (foundItems.length > 0) {
-            foundItems.forEach(todo => {
-                create(todo);
-                if (Array.isArray(todo.subtasks)) {
-                    todo.subtasks.forEach(sub => {
-                        if (sub.text.toLowerCase() === value) {
-                            let subItem = document.getElementById("subtask"+sub.subuniqueno);
-                            if (subItem) {
-                                subItem.classList.add("searchsub");
-                            }
-                        }
+        fetch(`${apiUrl}/search/${taskName}`)
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(errorData => {
+                        throw new Error(errorData.error || 'Unknown error occurred');
                     });
                 }
+                return response.json();
+            })
+            .then(todo => {
+                if (todo) {
+                    create(todo);
+                }
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+                todoitemcontainer.innerHTML = `<div class="alert alert-danger">${error.message}</div>`;
             });
+    }
+});
+
+// Theme Toggle Function
+themeToggleButton.addEventListener("click", function () {
+    document.body.classList.toggle("light-mode");
+    document.body.classList.toggle("dark-mode");
+});
+function checkstatus(checkboxId, labelId, listId) {
+    let labelElement = document.getElementById(labelId);
+    labelElement.classList.toggle("checked");
+    let indexItem = todoList.findIndex(function(eachTodo) {
+        let eachTodoId = "list" + eachTodo.taskId;
+        if (eachTodoId === listId) {
+            return true;
         } else {
-            todoitemcontainer.innerHTML = `<div class="alert alert-danger">Task not found</div>`;
+            return false;
         }
-    }
-});
-themeToggleButton.addEventListener("click", function() {
-    if (document.body.classList.contains("light-mode")) {
-        document.body.classList.remove("light-mode");
-        document.body.classList.add("dark-mode");
-    } else {
-        document.body.classList.remove("dark-mode");
-        document.body.classList.add("light-mode");
-    }
-});
-function getTodoListFromLocalStorage() {
-    let stringTodoList = localStorage.getItem("todoListKey");
-    let parsefield = JSON.parse(stringTodoList);
-    return parsefield === null ? [] : parsefield;
-}
-let todoList = getTodoListFromLocalStorage();
-console.log(todoList);
-function saveToLocalStorage() {
-    let stringTodoList = JSON.stringify(todoList);
-    localStorage.setItem("todoListKey", stringTodoList);
-}
-function deletef(listId) {
-    let listElement = document.getElementById(listId);
-    todoitemcontainer.removeChild(listElement);
-    let deleteItemIndex = todoList.findIndex(function (eachTodo) {
-        let eachTodoId = "list" + eachTodo.uniqueno;
-        return eachTodoId === listId;
     });
-    todoList.splice(deleteItemIndex, 1);
-    saveToLocalStorage();
-}
-function openSubtaskModal(listId) {
-    document.getElementById('subtaskModal').style.display = 'block';
-    document.getElementById('subtaskForm').dataset.listId = listId;
-}
-function closeSubtaskModal() {
-    document.getElementById('subtaskModal').style.display = 'none';
-}
-let closesubtask=document.querySelector(".close-subtask-modal");
-closesubtask.onclick = function() {
-    closeSubtaskModal();
-}
-document.getElementById('subtaskForm').onsubmit = function(event) {
-    event.preventDefault();
-    const listId = this.dataset.listId;
-    const subtaskName = document.getElementById('subtaskName').value;
-    const subtaskPriority = document.getElementById('subtaskPriority').value;
-    const subtaskDate = document.getElementById('subtaskDate').value;
-    const subtaskTime = document.getElementById('subtaskTime').value;
-    if (!subtaskName || !subtaskPriority || !subtaskDate || !subtaskTime) {
-        alert("Please fill out all fields.");
-        return;
+    console.log(indexItem);
+    if(indexItem!=-1){
+      let checkItem = todoList[indexItem];
+      if (checkItem.completed === true) {
+        checkItem.completed = false;
+      } else {
+        checkItem.completed = true;
     }
-    addSubtask(listId, subtaskName, subtaskPriority, subtaskDate, subtaskTime);
-};
-function addSubtask(listId, subtaskName, subtaskPriority, subtaskDate, subtaskTime) {
-    let listcontainer = document.getElementById(listId);
-    let subtaskcontainer = listcontainer.querySelector('.subtask-container');
-    let subtaskItem = document.createElement('li');
-    subtaskItem.classList.add('subtask-item','d-flex','flex-row');
-    subtaskItem.innerHTML = `
-    <div class="subcheckbox-label">${subtaskName}</div>
-    <div class="priority-label">${subtaskPriority}</div>
-    <div class="date-time-label">${subtaskDate} ${subtaskTime}</div>
-`;
-    let deletesub = document.createElement("i");
-    deletesub.classList.add("delete-icon", "fa", "fa-trash-alt");
-    let editsub= document.createElement("i");
-    editsub.classList.add("edit-icon", "fa", "fa-edit");
-    subtaskItem.appendChild(deletesub);
-    subtaskItem.appendChild(editsub);
-      let subtasktemp=[];
-    let todoItem = todoList.find(todo => `list${todo.uniqueno}` === listId);
-    if (todoItem) {
-        if (!todoItem.subtasks) {
-            todoItem.subtasks = [];
-        }
-        let newSubtask = {
-            text: subtaskName,
-            priority: subtaskPriority,
-            subuniqueno: Date.now(),
-            date: subtaskDate,
-            time: subtaskTime
-        };
-        let isDuplicate = todoItem.subtasks.some(subtask =>
-            subtask.text.toLowerCase() === newSubtask.text.toLowerCase()
-        );
-        if(isDuplicate){
-            alert("subtask is already present");
-            return;
-        }
-        let subtaskDateTime = new Date(`${subtaskDate}T${subtaskTime}`);
-       let currentDateTime = new Date();
-    if (subtaskDateTime < currentDateTime) {
-         alert("The subtask time is in the past");
-         return;
+    updateTodoOnServer(checkItem.taskId, checkItem);
     }
-        todoItem.subtasks.push(newSubtask);
-        subtasktemp.push(newSubtask);
-        let subtaskId="subtask"+subtasktemp[0].subuniqueno;
-        subtaskItem.id=subtaskId;
-        subtaskcontainer.appendChild(subtaskItem);
 
-        deletesub.onclick = function () {
-            deleteSubtask(listId,subtaskId);
-        }
-        editsub.onclick = function () {
-            openSubEditModal(listId,subtasktemp[0]);
-        }
-    }
-    saveToLocalStorage();
-    console.log(todoList);
 }
-function deleteSubtask(listId, subtaskId) {
-    let listElement = document.getElementById(listId);
-    let subtaskContainer = listElement.querySelector('.subtask-container');
-    let subtaskElement = document.getElementById(subtaskId);
-    console.log(subtaskElement);
-    if (subtaskElement) {
-        subtaskContainer.removeChild(subtaskElement);
-    } else {
-        console.log("not found");
-        return;
-    }
-    let todoItem = todoList.find(todo => `list${todo.uniqueno}` === listId);
-    if (todoItem) {
-        let deleteItemIndex = todoItem.subtasks.findIndex(function (eachSubtask) {
-            let eachSubtaskId = "subtask" +  eachSubtask.subuniqueno;
-            return eachSubtaskId === subtaskId;
-
-        });
-        if (deleteItemIndex > -1) {
-            todoItem.subtasks.splice(deleteItemIndex, 1);
-        }
-    }
-   saveToLocalStorage();
-}
-let subEditModal = document.getElementById("subtaskeditModal");
-let subcloseModal = document.querySelector(".closesub");
-let subeditForm = document.getElementById("subtaskeditForm");
-let  subEditArray=[];
-let currenListEditId=null;
-function openSubEditModal(listId,subtask) {
-    subEditArray=subtask;
-    currenListEditId=listId;
-    document.getElementById("subeditText").value = subtask.text;
-    document.getElementById("subeditPriority").value = subtask.priority;
-    document.getElementById("subeditDate").value = subtask.date;
-    document.getElementById("subeditTime").value = subtask.time;
-    subEditModal.style.display = "block";
-}
-function closeSubEditModal() {
-    subEditModal.style.display = "none";
-}
-subcloseModal.onclick = function() {
-    closeSubEditModal();
-}
-window.onclick = function(event) {
-    if (event.target === subEditModal) {
-        closeSubEditModal();
-    }
-}
-subeditForm.onsubmit = function(event) {
-    event.preventDefault();
-    let newText = document.getElementById("subeditText").value;
-    let newPriority = document.getElementById("subeditPriority").value;
-    let newDate = document.getElementById("subeditDate").value;
-    let newTime = document.getElementById("subeditTime").value;
-    let subItem = subEditArray;
-   if (subItem) {
-        let taskDateTime = new Date(`${newDate}T${newTime}`);
-        let currentDateTime = new Date();
-        if (taskDateTime < currentDateTime) {
-            alert("The sub task time is in the past");
-            return;
-        }
-        subItem.text = newText;
-        subItem.priority = newPriority;
-        subItem.date = newDate;
-        subItem.time = newTime;
-        let todoItem = todoList.find(todo => `list${todo.uniqueno}` === currenListEditId);
-        let subListItem = document.getElementById("subtask"+subItem.subuniqueno);
-        if (subListItem) {
-            subListItem.querySelector('.subcheckbox-label').textContent = newText;
-            subListItem.querySelector('.priority-label').textContent = newPriority;
-            subListItem.querySelector('.date-time-label').textContent = `${newDate} ${newTime}`;
-        }
-        saveToLocalStorage();
-
-    }
-}
-let modal = document.getElementById("editModal");
-let closeModal = document.querySelector(".close");
-let editForm = document.getElementById("editForm");
-let currentEditId = null;
-function openEditModal(todoItem) {
-    document.getElementById("editText").value = todoItem.text;
-    document.getElementById("editPriority").value = todoItem.priority;
-    document.getElementById("editDate").value = todoItem.date;
-    document.getElementById("editTime").value = todoItem.time;
-    currentEditId = todoItem.uniqueno;
-    console.log(currentEditId);
-    modal.style.display = "block";
-}
-function closeEditModal() {
-    modal.style.display = "none";
-}
-closeModal.onclick = function() {
-    closeEditModal();
-}
-window.onclick = function(event) {
-    if (event.target === modal) {
-        closeEditModal();
-    }
-}
-editForm.onsubmit = function(event) {
-    event.preventDefault();
-    let newText = document.getElementById("editText").value;
-    let newPriority = document.getElementById("editPriority").value;
-    let newDate = document.getElementById("editDate").value;
-    let newTime = document.getElementById("editTime").value;
-    let todoItem = todoList.find(todo => todo.uniqueno === currentEditId);
-    if (todoItem) {
-        let taskDateTime = new Date(`${newDate}T${newTime}`);
-        let currentDateTime = new Date();
-        if (taskDateTime < currentDateTime) {
-            alert("The task time is in the past");
-            return;
-        }
-        todoItem.text = newText;
-        todoItem.priority = newPriority;
-        todoItem.date = newDate;
-        todoItem.time = newTime;
-        let listItem = document.getElementById("list" + todoItem.uniqueno);
-        if (listItem) {
-            listItem.querySelector('.checkbox-label').textContent = newText;
-            listItem.querySelector('.priority-label').textContent = newPriority;
-            listItem.querySelector('.date-time-label').textContent = `${newDate} ${newTime}`;
-        }
-        saveToLocalStorage();
-    }
-}
+// Create Todo Item Function
 function create(todo) {
-    let listId = "list" + todo.uniqueno;
+    let listId = "list" + todo.taskId;
+    let labelId = "label" + todo.taskId;
+    let checkboxId = "checkbox" + todo.taskId;
     let list1 = document.createElement("li");
     list1.id = listId;
     list1.classList.add("todo-item-container", "d-flex", "flex-column", "draggable");
     list1.setAttribute("draggable", "true");
     todoitemcontainer.appendChild(list1);
+    let inputEle = document.createElement("input");
+    inputEle.type = "checkbox";
+    inputEle.id = checkboxId;
+    inputEle.checked = todo.completed;
+
+    inputEle.classList.add("checkbox-input");
+    console.log(todoitemcontainer);
+    inputEle.onclick = function() {
+            checkstatus(checkboxId, labelId, listId);
+    };
+    list1.appendChild(inputEle);
+
     let labelcontainer = document.createElement("div");
     labelcontainer.classList.add("d-flex", "flex-row", "label-container");
     list1.appendChild(labelcontainer);
+
     let addcontainer = document.createElement("div");
     addcontainer.classList.add("add-icon-container");
     labelcontainer.appendChild(addcontainer);
-    let additem = document.createElement("i");
-    additem.classList.add("add-icon", "bi", "bi-plus");
-    additem.onclick = function () {
-        openSubtaskModal(listId);
-    };
-    addcontainer.appendChild(additem);
+
     let labelEle = document.createElement("label");
-    labelEle.textContent = todo.text;
-    labelEle.id = "label" + todo.uniqueno;
+    labelEle.setAttribute("for", checkboxId);
+    labelEle.textContent = todo.taskName;
+    labelEle.id = labelId;
     labelEle.classList.add("checkbox-label");
+     if (todo.completed === true) {
+            labelEle.classList.add("checked");
+
+
+        }
     labelcontainer.appendChild(labelEle);
+
     let valueforpriority = document.createElement("span");
     valueforpriority.classList.add("priority-label");
-    valueforpriority.textContent = todo.priority;
+    valueforpriority.textContent = todo.taskPriority;
     labelcontainer.appendChild(valueforpriority);
+
     let valueforDateTime = document.createElement("span");
     valueforDateTime.classList.add("date-time-label");
-    valueforDateTime.textContent = todo.date + " " + todo.time;
+    valueforDateTime.textContent = `${todo.taskDueDate} ${todo.taskDueTime}`;
     labelcontainer.appendChild(valueforDateTime);
+
     let deletecontainer = document.createElement("div");
     deletecontainer.classList.add("delete-icon-container");
     labelcontainer.appendChild(deletecontainer);
+
     let deleteitem = document.createElement("i");
     deleteitem.classList.add("delete-icon", "fa", "fa-trash-alt");
+
     deleteitem.onclick = function () {
-        deletef(listId);
+        deleteTodoFromServer(todo.taskId).then((isDeleted) => {
+            if (isDeleted) {
+                todoList = todoList.filter(item => item.taskId !== todo.taskId);
+                renderTodoList();
+            } else {
+                console.error('Failed to delete the task from server.');
+            }
+        });
     };
     deletecontainer.appendChild(deleteitem);
+
     let editcontainer = document.createElement("div");
     editcontainer.classList.add("edit-icon-container");
     labelcontainer.appendChild(editcontainer);
+
     let edititem = document.createElement("i");
     edititem.classList.add("edit-icon", "fa", "fa-edit");
     edititem.onclick = function () {
         openEditModal(todo);
     };
     editcontainer.appendChild(edititem);
-    let subtaskcontainer = document.createElement('div');
-    subtaskcontainer.classList.add("subtask-container");
-    list1.appendChild(subtaskcontainer);
-    if (todo.subtasks) {
-        for (let subtask of todo.subtasks) {
-            console.log(subtask);
-            let subtaskItem = document.createElement('li');
-            subtaskItem.classList.add('subtask-item','d-flex','flex-row','draggable');
-            subtaskItem.setAttribute("draggable", "true");
-            subtaskItem.innerHTML=`<div class="subcheckbox-label">${subtask.text}</div><div class="priority-label">${subtask.priority}</div><div class="date-time-label">${subtask.date+" "+subtask.time}</div>`
 
-           let  subtaskId="subtask"+subtask.subuniqueno;
-            subtaskItem.id=subtaskId;
-           let deletesub = document.createElement("i");
-           deletesub.classList.add("delete-icon", "fa", "fa-trash-alt");
-           deletesub.onclick = function () {
-            deleteSubtask(listId,subtaskId);
-        };
-         let editsub= document.createElement("i");
-          editsub.classList.add("edit-icon", "fa", "fa-edit");
-          editsub.onclick=function(){
-            openSubEditModal(listId,subtask);
-          }
-    subtaskItem.appendChild(deletesub);
-    subtaskItem.appendChild(editsub);
-    subtaskcontainer.appendChild(subtaskItem);
-    addSubtaskDragAndDropHandlers(subtaskItem);
-        }
-    }
     addDragAndDropHandlers(list1);
-    initializeDragAndDrop();
 }
-function addto() {
+
+// Fetch All Todos and Render
+async function fetchTodos() {
+    console.log("fetch");
+    try {
+        const response = await fetch(`${apiUrl}/list`);
+        if (!response.ok) throw new Error('Network response was not ok');
+        todoList = await response.json();
+        console.log(todoList);
+        renderTodoList();
+    } catch (error) {
+        console.error('Error fetching todos:', error);
+    }
+}
+
+// Create Todo on Server
+async function createTodoOnServer(newTodo) {
+    console.log(JSON.stringify(newTodo));
+    try {
+        const response = await fetch(`${apiUrl}/insert`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newTodo)
+        });
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Network response was not ok: ${response.statusText} - ${errorText}`);
+        }
+        const createdTodo = await response.json();
+        console.log("created", createdTodo);
+        return createdTodo;
+    } catch (error) {
+        console.error('Error creating todo:', error);
+        return null;
+    }
+}
+
+// Update Todo on Server
+async function updateTodoOnServer(id, updatedTodo) {
+    try {
+        const response = await fetch(`${apiUrl}/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedTodo)
+        });
+        if (!response.ok) throw new Error('Network response was not ok');
+        return await response.json();
+    } catch (error) {
+        console.error('Error updating todo:', error);
+    }
+}
+
+// Delete Todo from Server
+async function deleteTodoFromServer(id) {
+    try {
+        const response = await fetch(`${apiUrl}/${id}`, {
+            method: 'DELETE'
+        });
+        if (!response.ok) throw new Error('Network response was not ok');
+        return true;
+    } catch (error) {
+        console.error('Error deleting todo:', error);
+        return false;
+    }
+}
+
+// Add Todo
+async function addto() {
+    console.log("Add button clicked");
     let elementadd = document.getElementById("todoUserInput");
     let elementvalue = elementadd.value;
     let priorityadd = document.getElementById("source");
@@ -401,114 +270,217 @@ function addto() {
     let datevalue = dateadd.value;
     let timeadd = document.getElementById("timeInput");
     let timevalue = timeadd.value;
-    let sourcevalue=sourceOrder.value;
-    if (elementvalue === "" ||priorityvalue===""||datevalue===""||timevalue==="") {
+    let sourcevalue = sourceOrder.value;
+
+    if (elementvalue === "" || priorityvalue === "" || datevalue === "" || timevalue === "") {
         alert("Please fill out all fields.");
         return;
     }
-    let newtodo = {
-        text: elementvalue,
-        priority: priorityvalue,
-        date: datevalue,
-        time: timevalue,
-        subtasks: [],
-        uniqueno: Date.now()
 
+    let newtodo = {
+        taskName: elementvalue,
+        taskPriority: priorityvalue,
+        taskDueDate: datevalue,
+        taskDueTime: timevalue,
+        completed: false
     };
+    console.log(newtodo);
+    console.log(elementvalue);
+    console.log(priorityvalue);
+    console.log(datevalue);
+    console.log(timevalue);
+
     let isDuplicate = todoList.some(todo =>
-        todo.text.toLowerCase() === newtodo.text.toLowerCase()
+        todo.taskName && newtodo.taskName && todo.taskName.toLowerCase() === newtodo.taskName.toLowerCase() &&
+        todo.taskDueDate === newtodo.taskDueDate &&
+        todo.taskDueTime === newtodo.taskDueTime
     );
-    if(isDuplicate){
-        alert("task is already present");
+    if (isDuplicate) {
+        alert("Task is already present");
         return;
     }
+
     let taskDateTime = new Date(`${datevalue}T${timevalue}`);
     let currentDateTime = new Date();
     if (taskDateTime < currentDateTime) {
-    alert("The task time is in the past");
-    return;
+        alert("The task time is in the past");
+        return;
     }
-    todoList.push(newtodo);
-    sortTodoList(sourcevalue);
-    todoitemcontainer.innerHTML = "";
-    for (let todo of todoList) {
-        create(todo);
+    let createdTodo = await createTodoOnServer(newtodo);
+    if (createdTodo) {
+        todoList.push(createdTodo);
+        sortTodoList(sourcevalue);
+        renderTodoList();
+        elementadd.value = "";
+        priorityadd.value = "";
+        dateadd.value = "";
+        timeadd.value = "";
     }
-    elementadd.value = "";
-    priorityadd.value = "";
-    dateadd.value = "";
-    timeadd.value = "";
-    saveToLocalStorage();
 }
-buttonclick.onclick = function () {
+
+buttonclick.addEventListener('click', (event) => {
+    event.preventDefault();
     addto();
-};
-for (let todo of todoList) {
-    create(todo);
+});
+
+// Open Edit Modal
+function openEditModal(todoItem) {
+    document.getElementById("editText").value = todoItem.taskName;
+    document.getElementById("editPriority").value = todoItem.taskPriority;
+    document.getElementById("editDate").value = todoItem.taskDueDate;
+    document.getElementById("editTime").value = todoItem.taskDueTime;
+    currentEditId = todoItem.taskId;
+    modal.style.display = "block";
 }
-function addSubtaskDragAndDropHandlers(subtaskItem) {
-    subtaskItem.addEventListener('dragstart', handleSubtaskDragStart);
-    subtaskItem.addEventListener('dragover', handleSubtaskDragOver);
-    subtaskItem.addEventListener('dragenter', handleSubtaskDragEnter);
-    subtaskItem.addEventListener('dragleave', handleSubtaskDragLeave);
-    subtaskItem.addEventListener('drop', handleSubtaskDrop);
-    subtaskItem.addEventListener('dragend', handleSubtaskDragEnd);
-}
-let subtaskDragSrcEl = null;
-function handleSubtaskDragStart(e) {
-    subtaskDragSrcEl = this;
-    e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('text/html', this.innerHTML);
-    this.classList.add('dragging');
-}
-function handleSubtaskDragOver(e) {
-    if (e.preventDefault) {
-        e.preventDefault();
+
+// Edit Form Submit
+editForm.onsubmit = async function(event) {
+    event.preventDefault();
+    let newText = document.getElementById("editText").value;
+    let newPriority = document.getElementById("editPriority").value;
+    let newDate = document.getElementById("editDate").value;
+    let newTime = document.getElementById("editTime").value;
+
+    let todoItem = todoList.find(todo => todo.taskId === currentEditId);
+    if (todoItem) {
+        let taskDateTime = new Date(`${newDate}T${newTime}`);
+        let currentDateTime = new Date();
+        if (taskDateTime < currentDateTime) {
+            alert("The task time is in the past");
+            return;
+        }
+        todoItem.taskName = newText;
+        todoItem.taskPriority = newPriority;
+        todoItem.taskDueDate = newDate;
+        todoItem.taskDueTime = newTime;
+
+        await updateTodoOnServer(currentEditId, todoItem);
+        renderTodoList();
+        closeEditModal();
     }
-    e.dataTransfer.dropEffect = 'move';
-    return false;
 }
-function handleSubtaskDragEnter() {
-    this.classList.add('over');
+
+// Close Edit Modal
+function closeEditModal() {
+    modal.style.display = "none";
 }
-function handleSubtaskDragLeave() {
-    this.classList.remove('over');
+closeModal.onclick = function() {
+    closeEditModal();
 }
-function handleSubtaskDrop(e) {
-    if (e.stopPropagation) {
-        e.stopPropagation();
+
+// Export Tasks
+document.getElementById("export").addEventListener('click', () => {
+    const blob = new Blob([JSON.stringify(todoList)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'tasks.json';
+    a.click();
+    URL.revokeObjectURL(url);
+});
+
+// Trigger file input click when import button is clicked
+importButton.addEventListener('click', () => {
+    fileInput.click();
+});
+
+// Import Tasks
+fileInput.addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    if (file && file.type === 'application/json') {
+        const reader = new FileReader();
+        reader.onload = async (event) => {
+            try {
+                const data = JSON.parse(event.target.result);
+                const uniqueData = data.filter(newTodo => {
+                    return !todoList.some(todo =>
+                        todo.taskName.toLowerCase() === newTodo.taskName.toLowerCase() &&
+                        todo.taskDueDate === newTodo.taskDueDate &&
+                        todo.taskDueTime === newTodo.taskDueTime
+                    );
+                });
+                todoList = todoList.concat(uniqueData);
+                renderTodoList();
+                // Save all imported tasks to the server
+                for (const todo of uniqueData) {
+                    await createTodoOnServer(todo);
+                }
+            } catch (error) {
+                console.error('Error parsing JSON:', error);
+            }
+        };
+        reader.readAsText(file);
+    } else {
+        console.error('Please select a valid JSON file.');
     }
-    if (subtaskDragSrcEl !== this) {
-        swapSubtaskElements(subtaskDragSrcEl, this);
-        updateSubtaskOrder(subtaskDragSrcEl, this);
+});
+
+// Notification
+function checkUpcomingDueDates() {
+    let now = new Date();
+    let notificationSentFor = new Set();
+
+    function checkTaskDueDates(task) {
+        let dueDateTimeString = `${task.taskDueDate}T${task.taskDueTime}`;
+        let dueDateTime = new Date(dueDateTimeString);
+
+        if (isNaN(dueDateTime.getTime())) {
+            console.error(`Invalid due date/time for task: ${task.taskName}`);
+            return;
+        }
+
+        let timeDifference = dueDateTime - now;
+        let timeDifferenceInSeconds = timeDifference / 1000;
+
+        if (timeDifferenceInSeconds > 0 && timeDifferenceInSeconds <= 120 && !notificationSentFor.has(task.taskId)) {
+            console.log(`Notification should be sent for task: ${task.taskName}`);
+
+            let notificationTitle = "Upcoming Task Due";
+            let notificationOptions = {
+                body: `Task: ${task.taskName} is due in ${Math.ceil(timeDifferenceInSeconds / 60)} minute(s)`,
+                icon: "https://cdni.iconscout.com/illustration/premium/thumb/todo-list-5523307-4609476.png?f=webp"
+            };
+
+            if (Notification.permission === "granted") {
+                new Notification(notificationTitle, notificationOptions);
+                notificationSentFor.add(task.taskId);
+            } else {
+                console.log("Notification permission not granted.");
+            }
+        }
     }
-    return false;
-}
-function handleSubtaskDragEnd() {
-    this.classList.remove('dragging');
-    let items = document.querySelectorAll('.subtask-item');
-    items.forEach(function (item) {
-        item.classList.remove('over');
+
+    todoList.forEach(task => {
+        checkTaskDueDates(task);
     });
 }
-function swapSubtaskElements(el1, el2) {
-    const temp = document.createElement("div");
-    el1.parentNode.insertBefore(temp, el1);
-    el2.parentNode.insertBefore(el1, el2);
-    temp.parentNode.insertBefore(el2, temp);
-    temp.parentNode.removeChild(temp);
-}
-function updateSubtaskOrder(fromElement, toElement) {
-    let listId = fromElement.closest('.todo-item-container').id;
-    let todoItem = todoList.find(todo => `list${todo.uniqueno}` === listId);
-    if (todoItem && todoItem.subtasks) {
-        let fromIndex = Array.from(fromElement.parentNode.children).indexOf(fromElement);
-        let toIndex = Array.from(toElement.parentNode.children).indexOf(toElement);
-        let movedSubtask = todoItem.subtasks.splice(fromIndex, 1)[0];
-        todoItem.subtasks.splice(toIndex, 0, movedSubtask);
-        saveToLocalStorage();
+
+function requestNotificationPermission() {
+    if (Notification.permission === 'default') {
+        Notification.requestPermission().then(function (permission) {
+            if (permission === 'granted') {
+                console.log('Notification permission granted.');
+                checkUpcomingDueDates();
+            } else {
+                console.log('Notification permission denied.');
+            }
+        }).catch(function (error) {
+            console.error('Error requesting notification permission:', error);
+        });
+    } else if (Notification.permission === 'granted') {
+        checkUpcomingDueDates();
+    } else {
+        console.log('Notification permission previously denied.');
     }
 }
+
+// Request notification permission when the script runs
+requestNotificationPermission();
+
+// Check for upcoming due dates every minute
+setInterval(checkUpcomingDueDates, 60 * 1000);
+
+// Drag and Drop Handlers
 function addDragAndDropHandlers(element) {
     element.addEventListener('dragstart', handleDragStart);
     element.addEventListener('dragover', handleDragOver);
@@ -517,13 +489,14 @@ function addDragAndDropHandlers(element) {
     element.addEventListener('drop', handleDrop);
     element.addEventListener('dragend', handleDragEnd);
 }
-let dragSrcEl = null;
+
 function handleDragStart(e) {
     dragSrcEl = this;
     e.dataTransfer.effectAllowed = 'move';
     e.dataTransfer.setData('text/html', this.innerHTML);
     this.classList.add('dragging');
 }
+
 function handleDragOver(e) {
     if (e.preventDefault) {
         e.preventDefault();
@@ -531,12 +504,15 @@ function handleDragOver(e) {
     e.dataTransfer.dropEffect = 'move';
     return false;
 }
+
 function handleDragEnter() {
     this.classList.add('over');
 }
+
 function handleDragLeave() {
     this.classList.remove('over');
 }
+
 function handleDrop(e) {
     if (e.stopPropagation) {
         e.stopPropagation();
@@ -547,13 +523,12 @@ function handleDrop(e) {
     }
     return false;
 }
+
 function handleDragEnd() {
     this.classList.remove('dragging');
-    let items = document.querySelectorAll('.draggable');
-    items.forEach(function (item) {
-        item.classList.remove('over');
-    });
+    document.querySelectorAll('.draggable').forEach(item => item.classList.remove('over'));
 }
+
 function swapElements(el1, el2) {
     const temp = document.createElement("div");
     el1.parentNode.insertBefore(temp, el1);
@@ -561,121 +536,24 @@ function swapElements(el1, el2) {
     temp.parentNode.insertBefore(el2, temp);
     temp.parentNode.removeChild(temp);
 }
+
 function updateMainTaskOrder(fromElement, toElement) {
     const fromIndex = Array.from(todoitemcontainer.children).indexOf(fromElement);
     const toIndex = Array.from(todoitemcontainer.children).indexOf(toElement);
     const movedItem = todoList.splice(fromIndex, 1)[0];
     todoList.splice(toIndex, 0, movedItem);
-    saveToLocalStorage();
+    // Optional: Update order in the server if needed
+    // saveToServer();
 }
-function initializeDragAndDrop() {
-    let mainTasks = document.querySelectorAll('.todo-item-container');
-    mainTasks.forEach(task => addDragAndDropHandlers(task));
 
-    let subtasks = document.querySelectorAll('.subtask-item');
-    subtasks.forEach(subtask => addSubtaskDragAndDropHandlers(subtask));
+// Initialize
+function renderTodoList() {
+    todoitemcontainer.innerHTML = ''; // Clear existing items
+    todoList.forEach(todo => create(todo)); // Recreate todo items
 }
-function checkUpcomingDueDates() {
-    let now = new Date();
-    let notificationSentFor = new Set();
-    function checkTaskDueDates(task, parentText = "") {
-        let dueDateTimeString = `${task.date}T${task.time}`;
-        let dueDateTime = new Date(dueDateTimeString);
-        if (isNaN(dueDateTime.getTime())) {
-            console.error(`Invalid due date/time for task: ${task.text}, DateTime String: ${dueDateTimeString}`);
-            return;
-        }
-        let timeDifference = dueDateTime - now;
-        let timeDifferenceInSeconds = timeDifference / 1000;
-        if (timeDifferenceInSeconds > 0 && timeDifferenceInSeconds <= 120 && !notificationSentFor.has(task.uniqueno)) {
-            console.log(`Notification should be sent for task: ${task.text}`);
 
-            let notificationTitle = "Upcoming Task Due";
-            let notificationOptions = {
-                body: `Task: ${parentText ? parentText + " > " : ""}${task.text} is due in ${Math.ceil(timeDifferenceInSeconds / 60)} minute(s)`,
-                 icon: "https://cdni.iconscout.com/illustration/premium/thumb/todo-list-5523307-4609476.png?f=webp"
-            };
-            if (Notification.permission === "granted") {
-                console.log("Sending notification...");
-                new Notification(notificationTitle, notificationOptions);
-                notificationSentFor.add(task.uniqueno);
-            } else {
-                console.log("Notification permission not granted.");
-            }
-        }
-    }
-    for (let todo of todoList) {
-        checkTaskDueDates(todo);
-        if (todo.subtasks && Array.isArray(todo.subtasks)) {
-            for (let subtask of todo.subtasks) {
-                checkTaskDueDates(subtask, todo.text);
-            }
-        }
-    }
-}
-function requestNotificationPermission() {
-    if (Notification.permission === 'default') {
-        Notification.requestPermission().then(function(permission) {
-            if (permission === 'granted') {
-                console.log('Notification permission granted.');
-                checkUpcomingDueDates();
-            } else {
-                console.log('Notification permission denied.');
-            }
-        }).catch(function(error) {
-            console.error('Error requesting notification permission:', error);
-        });
-    } else if (Notification.permission === 'granted') {
-        checkUpcomingDueDates();
-    } else {
-        console.log('Notification permission previously denied.');
-    }
-}
-requestNotificationPermission();
-setInterval(checkUpcomingDueDates, 60 * 1000);
+// Sort Todo List on Change
 sourceOrder.addEventListener("change", (event) => {
     sortTodoList(event.target.value);
-    todoitemcontainer.innerHTML = "";
-    for (let todo of todoList) {
-        create(todo);
-    }
-});
-document.getElementById("export").addEventListener('click',(e)=>{
-    const blob = new Blob([JSON.stringify(todoList)],
-     { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'tasks.json';
-    a.click();
-    URL.revokeObjectURL(url);
-}
-)
-document.getElementById("import").addEventListener('click', () => {
-    document.getElementById("fileInput").click();
-});
-
-document.getElementById("fileInput").addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (file && file.type === 'application/json') {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-            try {
-                const data = JSON.parse(event.target.result);
-                console.log(data);
-                debugger;
-                todoList = todoList.concat(data);
-                console.log('Tasks imported successfully:', tasks);
-            } catch (error) {
-                console.error('Error parsing JSON:', error);
-            }
-            for (let todo of todoList) {
-                create(todo);
-            }
-            saveToLocalStorage();
-        };
-        reader.readAsText(file);
-    } else {
-        console.error('Please select a valid JSON file.');
-    }
+    renderTodoList();
 });

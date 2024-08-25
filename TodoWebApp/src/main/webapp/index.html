@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html  lang="en"  data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark">
 
 <head>
+    <div class="bodyfirst">
+        Welcome <span style="color:steelblue;">${user.username}</span>
+
+
+    </div>
     <title>ToDos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style2.css">
 </head>
@@ -22,8 +34,10 @@
     </div>
     <div class="row theme-toggle">
         <div class="col-3">
-            <button type="file" id="import" class="ImportButton"> <i id="importIcon" class="fa fa-upload" title="Import Tasks"></i></button>
-            <button type="button" id="export"class="ExportButton"><i id="exportIcon" class="fa fa-download" title="Export Tasks"></i></button>
+            <button type="file" id="import" class="ImportButton"><i id="importIcon" class="fa fa-upload"
+                                                                    title="Import Tasks"></i></button>
+            <button type="button" id="export" class="ExportButton"><i id="exportIcon" class="fa fa-download"
+                                                                      title="Export Tasks"></i></button>
             <input type="file" id="fileInput" accept="application/json" style="display: none;">
 
         </div>
@@ -37,7 +51,7 @@
         <div class="col-6">
             <div class="input-with-icon">
                 <i id="search-icon" class="fas fa-search"></i>
-                <input type="text"  id="search-input" class="form-control" placeholder="Search">
+                <input type="text" id="search-input" class="form-control" placeholder="Search">
             </div>
         </div>
 
@@ -53,22 +67,29 @@
             <h1 class="create-task-heading ">
                 Create <span class="create-task-heading-subpart">Task</span>
             </h1>
-            <form action="taskservlet" method="POST">
-            <input type="text" id="todoUserInput" class="todo-user-input" placeholder="Enter task to add"/>
-            <select id="source" class="priority-user-input">
-                <option value="High">High</option>
-                <option value="Medium">Medium</option>
-                <option value="Low">Low</option>
-            </select>
-            <input type="date" id="dateInput" class="duration-user-input" placeholder="Enter duration"/>
-            <input type="time" id="timeInput" class="durationtime-user-input" placeholder="Enter time"/>
-            <select id="sourceorder" class="order-user-input">
-                <option value="priority">priority</option>
-                <option value="date">date</option>
-            </select>
 
-            <button type="submit" class="add-todo-button mb-3 mt-3" id="addListElement">Add</button>
-            </form>
+                <input type="hidden" id="todoId" name="id" value="">
+
+                    <input type="text" id="todoUserInput" class="todo-user-input" placeholder="Enter task to add"/>
+
+                    <select id="source" class="priority-user-input">
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+
+
+                <input type="date" id="dateInput" class="duration-user-input" placeholder="Enter duration"/>
+                <input type="time" id="timeInput" class="durationtime-user-input" placeholder="Enter time"/>
+
+
+                <select id="sourceorder" class="order-user-input">
+                    <option value="priority">priority</option>
+                    <option value="date">date</option>
+                </select>
+                <button class="add-todo-button mb-3 mt-3" id="addListElement">Add</button>
+
+
             <h1 class="todo-items-heading">
                 My <span class="todo-items-heading-subpart">Tasks</span>
             </h1>
@@ -84,7 +105,7 @@
                 <div class="row  mt-3">
                     <div class="col-12 col-md-6">
                         <label for="editText" class="label">Text:</label>
-                        <input type="text" id="editText" class="sub"required>
+                        <input type="text" id="editText" class="sub" required>
                     </div>
                     <div class="col-12 col-md-6">
                         <label for="editPriority" class="label">Priority:</label>
@@ -114,93 +135,10 @@
             </form>
         </div>
     </div>
-    <!--Subtask Edit model-->
-    <div id="subtaskeditModal" class="submodal">
-        <div class="modal-content">
-            <span class="closesub">&times;</span>
-            <h2 class="Edit-subtask-heading">Edit Subtask</h2>
-            <form id="subtaskeditForm">
-                <div class="row  mt-3">
-                    <div class="col-12 col-md-6">
-                        <label for="subeditText" class="label">Text:</label>
-                        <input type="text" id="subeditText" class="sub" required>
 
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="subeditPriority"  class="label">Priority:</label>
-                        <select id="subeditPriority" class="sub"   required>
-                            <option value="High">High</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Low">Low</option>
-                        </select>
-
-                    </div>
-
-                </div>
-                <div class="row ">
-                    <div class="col-12 col-md-6">
-                        <label for="subeditDate" class="label" >Date:</label>
-                        <input type="date" id="subeditDate" class="sub" required>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="subeditTime"  class="label">Time:</label>
-                        <input type="time" id="subeditTime"  class="sub" required>
-                    </div>
-
-                </div>
-                <div class="row mt-3">
-                    <div class="col-12  text-center">
-                        <button type="submit" class="savebutton ">Save</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- Subtask Modal -->
-    <div id="subtaskModal" class="modal2">
-        <div class="modal-content2">
-            <span class="close-subtask-modal">&times;</span>
-            <h2 class="create-subtask-heading mb-3"></h2>
-                Create Sub Task</span>
-                </h1>
-                <form id="subtaskForm">
-                    <div class="row  mt-3">
-                        <div class="col-12 col-md-6">
-                            <label for="subtaskName" class="label">Subtask</label>
-                            <input type="text" id="subtaskName" class="sub" required>
-
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label for="subtaskPriority" class="label">Priority:</label>
-                            <select id="subtaskPriority" class="sub">
-                                <option value="High">High</option>
-                                <option value="Medium">Medium</option>
-                                <option value="Low">Low</option>
-                            </select>
-
-                        </div>
-
-                    </div>
-                    <div class="row ">
-                        <div class="col-12 col-md-6">
-                            <label for="subtaskDate" class="label">Date:</label>
-                            <input type="date" id="subtaskDate" class="sub">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label for="subtaskTime" class="label">Time:</label>
-                            <input type="time" id="subtaskTime" class="sub">
-                        </div>
-
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-12  text-center">
-                            <button type="submit" class="savebutton ">Save</button>
-                        </div>
-                    </div>
-                </form>
-        </div>
-    </div>
 </div>
+
+
 <script src="script.js"></script>
 </body>
 

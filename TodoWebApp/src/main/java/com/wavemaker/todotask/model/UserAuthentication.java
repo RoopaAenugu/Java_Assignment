@@ -1,8 +1,17 @@
-package com.wavemaker.todotask.pojo;
+package com.wavemaker.todotask.model;
 
 public class UserAuthentication {
     private String username;
     private  String password;
+    private int userId;
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
     public String getPassword() {
         return password;

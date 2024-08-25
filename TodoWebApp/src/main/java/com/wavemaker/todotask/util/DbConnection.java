@@ -13,7 +13,7 @@ public class DbConnection {
     //constants
     private static final Logger logger = LoggerFactory.getLogger(DbConnection.class);
 
-    private final static String DB_URL = "jdbc:mysql://127.0.0.1:3306/employeedatabase";
+    private final static String DB_URL = "jdbc:mysql://127.0.0.1:3306/TODOAPP";
     private final static String DB_USERNAME = "root";
     private final static String DB_PASSWORD = "Roopa#77";
     private static volatile Connection connection;

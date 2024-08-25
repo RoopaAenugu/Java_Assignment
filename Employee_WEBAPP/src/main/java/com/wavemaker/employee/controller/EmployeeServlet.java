@@ -210,7 +210,6 @@ public class EmployeeServlet extends HttpServlet {
             writeResponse(resp, "Missing employee ID.");
             return;
         }
-
         try {
             int id = Integer.parseInt(idStr);
             Employee employee = employeeService.getEmployeeById(id);

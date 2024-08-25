@@ -1,87 +1,87 @@
 package com.wavemaker.todotask.login;
 
 import com.google.gson.Gson;
-import com.wavemaker.todotask.pojo.UserAuthentication;
-import com.wavemaker.todotask.util.DbConnection;
+import com.wavemaker.todotask.model.UserAuthentication;
+import com.wavemaker.todotask.service.LoginService;
+import com.wavemaker.todotask.service.UserCookieTaskService;
+import com.wavemaker.todotask.service.impl.LoginServiceImpl;
+import com.wavemaker.todotask.service.impl.UserCookieTaskServiceImpl;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.UUID;
 
 @WebServlet("/login")
 public class UserLoginServlet extends HttpServlet {
     private static Gson gson;
+    private static LoginService loginService;
+    private static UserCookieTaskService userCookieTaskService;
 
     @Override
     public void init() {
         gson = new Gson();
+        loginService = new LoginServiceImpl();
+        userCookieTaskService = new UserCookieTaskServiceImpl();
+
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.setContentType("application/json");
-        resp.setCharacterEncoding("UTF-8");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException{
+        try {
+            authenticate(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+            writeResponse(response, gson.toJson("An error occurred while processing your request."));
+        }
+    }
 
-
-        // Parse the JSON request body to a UserAuthentication object
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
+    private void authenticate(HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
 
         if (username == null || password == null) {
-            writeResponse(resp, gson.toJson("Missing required parameters."));
+            writeResponse(response, gson.toJson("Missing required parameters."));
             return;
         }
-        UserAuthentication userAuthentication=new UserAuthentication();
+
+        UserAuthentication userAuthentication = new UserAuthentication();
         userAuthentication.setUsername(username);
         userAuthentication.setPassword(password);
 
-        // Create an instance of the service class
-        boolean userAdded = getUserByUsername(userAuthentication);
+        try {
+            int userId = loginService.isValidate(userAuthentication);
+            if (userId != -1) {
+                String cookieValue = UUID.randomUUID().toString();
+                String cookieName = "auth_cookie";
+                Cookie cookie = new Cookie(cookieName, cookieValue);
+                HttpSession adminSession = request.getSession(true);
+                adminSession.setAttribute(cookieValue, userId);
+                response.addCookie(cookie);
+                userAuthentication.setUserId(userId);
+                userCookieTaskService.addCookie(cookieValue, userId);
 
-        if (userAdded) {
-            String cookieValue = UUID.randomUUID().toString();
-            String cookieName = "auth_cookie";
-            Cookie cookie = new Cookie(cookieName, cookieValue);
-            HttpSession adminSession = req.getSession(true);
-            adminSession.setAttribute(cookieValue, userAuthentication);
-            resp.addCookie(cookie);
-            resp.sendRedirect("index.html");
-        } else {
-            writeResponse(resp, "User login authentication is not added.");
+                response.sendRedirect("index.html");
+            } else {
+                HttpSession session = request.getSession();
+                session.setAttribute("error", "Invalid username or password.");
+                response.sendRedirect("login/login.jsp");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            writeResponse(response, gson.toJson("An error occurred while processing your request."));
         }
     }
 
-    private void writeResponse(HttpServletResponse resp, String message) throws IOException {
-        PrintWriter out = resp.getWriter();
-        resp.setContentType("text/plain");
+    private void writeResponse(HttpServletResponse response, String message) throws IOException {
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
         out.println(message);
     }
-    private static boolean getUserByUsername(UserAuthentication userAuthentication){
-        String query = "SELECT * FROM USERS WHERE USERNAME=? AND PASSWORD=?";
-
-        try (Connection connection = DbConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setString(1, userAuthentication.getUsername());
-            preparedStatement.setString(2, userAuthentication.getPassword());
-
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            if (resultSet.next()) {
-                return true;
-            }
-
-        } catch (SQLException e) {
-
-        }
-        return false;
-
-    }
 }
-
-

@@ -14,4 +14,9 @@ public class LoginServiceImpl implements LoginService {
     public int isValidate(UserAuthentication userAuthentication) {
         return loginRepository.isValidate(userAuthentication);
     }
+
+    @Override
+    public UserAuthentication addUser(UserAuthentication userAuthentication) {
+      return loginRepository.addUser(userAuthentication);
+    }
 }

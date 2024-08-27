@@ -21,4 +21,10 @@ public class UserCookieTaskServiceImpl implements UserCookieTaskService {
     public int getUserIdByCookieValue(String cookieValue) {
         return userCookieTaskRepository.getUserIdByCookieValue(cookieValue);
     }
+
+    @Override
+    public void removeCookie(String cookieValue) {
+         userCookieTaskRepository.removeCookie(cookieValue);
+
+    }
 }

@@ -16,18 +16,10 @@ import java.util.Map;
 public class TodoTaskRepositoryInDbImpl implements TodoTaskRepository {
     private static final Logger logger = LoggerFactory.getLogger(TodoTaskRepositoryInDbImpl.class);
     // Define priority mapping
-    private static final Map<String, Integer> PRIORITY_ORDER = Map.of(
-            "High", 1,
-            "Medium", 2,
-            "Low", 3
-    );
-
     @Override
     public List<TodoTask> getAllTasks(int userId) {
         List<TodoTask> tasks = new ArrayList<>();
-        String query = "SELECT * FROM TODO_TASK WHERE USER_ID = ? ORDER BY CASE TASK_PRIORITY " +
-                "WHEN 'High' THEN 1 WHEN 'Medium' THEN 2 WHEN 'Low' THEN 3 END";
-
+        String query = "SELECT * FROM TODO_TASK WHERE USER_ID = ?";
         try (Connection connection = DbConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 

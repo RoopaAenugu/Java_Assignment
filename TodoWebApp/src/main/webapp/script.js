@@ -47,12 +47,10 @@ function sortTodoList(sourceValue) {
         });
     }
 }
-
 // Search Functionality
 searchIcon.addEventListener("click", function () {
     let taskName = search.value.toLowerCase().trim();
     todoitemcontainer.innerHTML = '';
-
     if (taskName === "") {
         renderTodoList();
     } else {
@@ -76,7 +74,6 @@ searchIcon.addEventListener("click", function () {
             });
     }
 });
-
 // Theme Toggle Function
 themeToggleButton.addEventListener("click", function () {
     document.body.classList.toggle("light-mode");
@@ -115,11 +112,11 @@ function create(todo) {
     list1.classList.add("todo-item-container", "d-flex", "flex-column", "draggable");
     list1.setAttribute("draggable", "true");
     todoitemcontainer.appendChild(list1);
+
     let inputEle = document.createElement("input");
     inputEle.type = "checkbox";
     inputEle.id = checkboxId;
     inputEle.checked = todo.completed;
-
     inputEle.classList.add("checkbox-input");
     console.log(todoitemcontainer);
     inputEle.onclick = function() {
@@ -203,7 +200,6 @@ async function fetchTodos() {
         console.error('Error fetching todos:', error);
     }
 }
-
 // Create Todo on Server
 async function createTodoOnServer(newTodo) {
     console.log(JSON.stringify(newTodo));
@@ -271,12 +267,10 @@ async function addto() {
     let timeadd = document.getElementById("timeInput");
     let timevalue = timeadd.value;
     let sourcevalue = sourceOrder.value;
-
     if (elementvalue === "" || priorityvalue === "" || datevalue === "" || timevalue === "") {
         alert("Please fill out all fields.");
         return;
     }
-
     let newtodo = {
         taskName: elementvalue,
         taskPriority: priorityvalue,
@@ -289,7 +283,6 @@ async function addto() {
     console.log(priorityvalue);
     console.log(datevalue);
     console.log(timevalue);
-
     let isDuplicate = todoList.some(todo =>
         todo.taskName && newtodo.taskName && todo.taskName.toLowerCase() === newtodo.taskName.toLowerCase() &&
         todo.taskDueDate === newtodo.taskDueDate &&
@@ -299,7 +292,6 @@ async function addto() {
         alert("Task is already present");
         return;
     }
-
     let taskDateTime = new Date(`${datevalue}T${timevalue}`);
     let currentDateTime = new Date();
     if (taskDateTime < currentDateTime) {
@@ -317,12 +309,10 @@ async function addto() {
         timeadd.value = "";
     }
 }
-
 buttonclick.addEventListener('click', (event) => {
     event.preventDefault();
     addto();
 });
-
 // Open Edit Modal
 function openEditModal(todoItem) {
     document.getElementById("editText").value = todoItem.taskName;
@@ -332,7 +322,6 @@ function openEditModal(todoItem) {
     currentEditId = todoItem.taskId;
     modal.style.display = "block";
 }
-
 // Edit Form Submit
 editForm.onsubmit = async function(event) {
     event.preventDefault();
@@ -359,7 +348,6 @@ editForm.onsubmit = async function(event) {
         closeEditModal();
     }
 }
-
 // Close Edit Modal
 function closeEditModal() {
     modal.style.display = "none";
@@ -367,7 +355,6 @@ function closeEditModal() {
 closeModal.onclick = function() {
     closeEditModal();
 }
-
 // Export Tasks
 document.getElementById("export").addEventListener('click', () => {
     const blob = new Blob([JSON.stringify(todoList)], { type: 'application/json' });
@@ -423,24 +410,19 @@ function checkUpcomingDueDates() {
     function checkTaskDueDates(task) {
         let dueDateTimeString = `${task.taskDueDate}T${task.taskDueTime}`;
         let dueDateTime = new Date(dueDateTimeString);
-
         if (isNaN(dueDateTime.getTime())) {
             console.error(`Invalid due date/time for task: ${task.taskName}`);
             return;
         }
-
         let timeDifference = dueDateTime - now;
         let timeDifferenceInSeconds = timeDifference / 1000;
-
         if (timeDifferenceInSeconds > 0 && timeDifferenceInSeconds <= 120 && !notificationSentFor.has(task.taskId)) {
             console.log(`Notification should be sent for task: ${task.taskName}`);
-
             let notificationTitle = "Upcoming Task Due";
             let notificationOptions = {
                 body: `Task: ${task.taskName} is due in ${Math.ceil(timeDifferenceInSeconds / 60)} minute(s)`,
                 icon: "https://cdni.iconscout.com/illustration/premium/thumb/todo-list-5523307-4609476.png?f=webp"
             };
-
             if (Notification.permission === "granted") {
                 new Notification(notificationTitle, notificationOptions);
                 notificationSentFor.add(task.taskId);
@@ -449,12 +431,10 @@ function checkUpcomingDueDates() {
             }
         }
     }
-
     todoList.forEach(task => {
         checkTaskDueDates(task);
     });
 }
-
 function requestNotificationPermission() {
     if (Notification.permission === 'default') {
         Notification.requestPermission().then(function (permission) {
@@ -473,10 +453,8 @@ function requestNotificationPermission() {
         console.log('Notification permission previously denied.');
     }
 }
-
 // Request notification permission when the script runs
 requestNotificationPermission();
-
 // Check for upcoming due dates every minute
 setInterval(checkUpcomingDueDates, 60 * 1000);
 

@@ -4,4 +4,5 @@ import com.wavemaker.todotask.model.UserAuthentication;
 
 public interface LoginService {
     public int isValidate(UserAuthentication userAuthentication);
+    public UserAuthentication addUser(UserAuthentication userAuthentication);
 }

@@ -4,4 +4,5 @@ import com.wavemaker.todotask.model.UserAuthentication;
 
 public interface LoginRepository {
     public int isValidate(UserAuthentication userAuthentication);
+    public UserAuthentication addUser(UserAuthentication userAuthentication);
 }

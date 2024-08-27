@@ -13,6 +13,7 @@ import jakarta.servlet.http.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLEncoder;
 import java.util.UUID;
 
 @WebServlet("/login")
@@ -35,7 +36,6 @@ public class UserLoginServlet extends HttpServlet {
         try {
             authenticate(request, response);
         } catch (ServletException | IOException e) {
-            e.printStackTrace();
             writeResponse(response, gson.toJson("An error occurred while processing your request."));
         }
     }
@@ -65,15 +65,11 @@ public class UserLoginServlet extends HttpServlet {
                 response.addCookie(cookie);
                 userAuthentication.setUserId(userId);
                 userCookieTaskService.addCookie(cookieValue, userId);
-
                 response.sendRedirect("index.html");
             } else {
-                HttpSession session = request.getSession();
-                session.setAttribute("error", "Invalid username or password.");
-                response.sendRedirect("login/login.jsp");
+                response.sendRedirect("login.html?error=" + URLEncoder.encode("Invalid username or password.", "UTF-8"));
             }
         } catch (IOException e) {
-            e.printStackTrace();
             writeResponse(response, gson.toJson("An error occurred while processing your request."));
         }
     }

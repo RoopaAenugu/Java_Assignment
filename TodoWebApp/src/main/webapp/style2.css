@@ -49,6 +49,26 @@ body.dark-mode{
     margin-top: 1px;
 
 }
+#logoutButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right:40px;
+    border-radius: 10px;
+}
+
+ /* Adjust this value based on the width of the Logout button */
+
+.LogoutButton {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .input-with-icon {
     position: relative;
     float:right;
@@ -77,12 +97,14 @@ body.dark-mode{
 
 }
 .todos-heading {
-    text-align: center;
     font-family: "Roboto";
     font-size: 40px;
     font-weight: 500;
     margin-top: 20px;
     margin-bottom: 15px;
+     position: relative;
+      text-align: center;
+      margin-right: 100px;
 }
 .create-task-heading, .todo-items-heading{
     font-family: "Roboto";

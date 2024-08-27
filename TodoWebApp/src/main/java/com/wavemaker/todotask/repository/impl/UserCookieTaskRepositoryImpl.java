@@ -53,4 +53,25 @@ public class UserCookieTaskRepositoryImpl implements UserCookieTaskRepository {
         }
         return -1; // Return -1 or another sentinel value indicating no user ID found
     }
+
+    @Override
+    public void removeCookie(String cookieValue) {
+        String deleteCookieSQL = "DELETE FROM COOKIE WHERE COOKIE_VALUE = ?";
+        try (Connection connection = DbConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(deleteCookieSQL)) {
+
+            preparedStatement.setString(1, cookieValue);
+
+            int rowsDeleted = preparedStatement.executeUpdate();
+            if (rowsDeleted > 0) {
+                logger.info("Cookie deleted successfully for cookie value: " + cookieValue);
+            } else {
+                logger.warn("No cookie found with the given cookie value: " + cookieValue);
+            }
+        } catch (SQLException e) {
+            logger.error("Failed to delete cookie due to a database error.", e);
+            // Handle the error as needed
+        }
+
+    }
 }

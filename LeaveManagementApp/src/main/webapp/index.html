@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+
+        .navbar-nav .nav-item {
+            margin-left: 15px;
+        }
+
+        .navbar-nav .nav-item:last-child {
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Employee Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showSection('applyLeave')">Apply Leave</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showSection('appliedLeaves')">Applied Leaves</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showSection('myTeamLeaves')">My Team Leaves</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="manager-login.html">Manager Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- Apply Leave Section -->
+    <div id="applyLeave" class="form-section">
+        <h2>Apply for Leave</h2>
+        <form id="applyLeaveForm" method="post">
+            <div class="form-group">
+                <label for="leaveType">Leave Type:</label>
+                <select class="form-control" id="leaveType" name="leaveType" required>
+                    <option value="">Select Leave Type</option>
+                    <option value="Sick Leave">Sick Leave</option>
+                    <option value="Vacation Leave">Vacation Leave</option>
+                    <option value="Casual Leave">Casual Leave</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fromDate">From Date:</label>
+                <input type="date" class="form-control" id="fromDate" name="fromDate" required>
+            </div>
+            <div class="form-group">
+                <label for="toDate">To Date:</label>
+                <input type="date" class="form-control" id="toDate" name="toDate" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason:</label>
+                <textarea class="form-control" id="reason" name="reason" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments (Optional):</label>
+                <textarea class="form-control" id="comments" name="comments" rows="2"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Leave Request</button>
+        </form>
+    </div>
+
+    <!-- Applied Leaves Section -->
+    <div id="appliedLeaves" class="form-section">
+        <h2>My Applied Leaves</h2>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Leave ID</th>
+                <th>Leave Type</th>
+                <th>From Date</th>
+                <th>To Date</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Comments</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Dynamic content will be populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- My Team Leaves Section -->
+    <div id="myTeamLeaves" class="form-section">
+        <h2>My Team's Leave Requests</h2>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Leave ID</th>
+                <th>Employee Name</th>
+                <th>Leave Type</th>
+                <th>From Date</th>
+                <th>To Date</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Dynamic content will be populated here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="employeescript.js"></script>
+
+</body>
+</html>

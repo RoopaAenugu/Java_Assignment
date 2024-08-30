@@ -5,11 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome for icons -->
+
     <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #343a40;
+        }
         .container {
             margin-top: 20px;
         }
 
+        /* Heading Styles */
+        h4{
+            color: #007bff;
+            font-weight: bold;
+            margin-bottom: 30px;
+             text-align: center;
+        }
+
+       /* Navbar Styles */
+        .navbar {
+                background-color: #b0b0b0; /* Ash color */
+                padding: 15px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+         }
+
+         .navbar-brand {
+                color: #fff;
+                font-size: 1.5em;
+                font-weight: bold;
+         }
+
+         .navbar-brand:hover {
+                color: #cce5ff;
+          }
+
+          .navbar-nav .nav-link {
+               color: #fff;
+               font-weight: bold;
+               margin-right: 20px;
+          }
+
+          .navbar-nav .nav-link:hover {
+                color: #cce5ff;
+          }
+
+          #profileDropdown {
+                 display: none;
+
+          }
+         /* Profile and Employee Name Styles */
+        .profile-container {
+            position: absolute;
+            top: 5px;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+      /* Display dropdown menu when it has the 'show' class */
+        #profileDropdown.show {
+            display: block;
+            padding: 10px 10px;
+            width:220px;
+            border-radius: 10px;
+        }
+
+         .emp-name {
+            font-size: 1.2em;
+            color: #007bff;
+            font-weight: bold;
+            margin-right: 10px;
+         }
+
+        .profile-icon {
+            font-size: 1.5em;
+            color: #007bff;
+        }
+
+        /* Dropdown Styles */
+        .navbar-nav .dropdown-menu {
+            border-radius: 16px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-item {
+            color: #007bff;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f0f2f5;
+        }
+
+        /* Logout Button */
+        .LogoutButton {
+            background: none;
+            border: none;
+            color: #dc3545;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .LogoutButton:hover {
+            background-color: #f0f2f5;
+        }
+
+        /* Form Section Styles */
         .form-section {
             display: none;
         }
@@ -18,12 +145,41 @@
             display: block;
         }
 
-        .navbar-nav .nav-item {
-            margin-left: 15px;
+        .table th {
+            background-color: #007bff;
+            color: #ffffff;
+
         }
 
-        .navbar-nav .nav-item:last-child {
-            margin-left: auto;
+        .table td {
+            vertical-align: middle;
+            text-align: center;
+        }
+       /* Apply Leave Form Styles*/
+       #applyLeave, #appliedLeaves,#myTeamLeaves {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+       }
+
+       #applyLeaveForm label {
+             font-weight: bold;
+              color: green;
+        }
+
+        #applyLeaveForm .custom-select ,#applyLeaveForm .form-control,  #applyLeaveForm textarea {
+            border-radius: 5px;
+            border-color: #ced4da;
+        }
+        #applyLeaveForm button {
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+            width:200px;
+            display: block;
+            margin: 10px auto;
         }
     </style>
 </head>
@@ -31,7 +187,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Employee Dashboard</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -46,24 +203,39 @@
                 <a class="nav-link" href="#" onclick="showSection('myTeamLeaves')">My Team Leaves</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="manager-login.html">Manager Login</a>
+                <a class="nav-link" href="#" id="profileLink">
+                    <div class="profile-container" id="profileContainer">
+                        <span id="employeeName" class="emp-name">John Doe</span>
+                        <i id="profileIcon" class="fas fa-user profile-icon"></i>
+                        <div id="profileDropdown" class="dropdown-menu">
+                            <a class="dropdown-item" href="#" id="profileDetails">Profile</a>
+                            <form action="logout" method="post">
+                                <button type="submit" id="logoutButton" class="LogoutButton">Logout</button>
+                            </form>
+                        </div><!-- Font Awesome profile icon -->
+                    </div>
+                </a>
+
             </li>
+
         </ul>
     </div>
 </nav>
 
 <div class="container">
     <!-- Apply Leave Section -->
+    <!-- Apply Leave Section -->
     <div id="applyLeave" class="form-section">
-        <h2>Apply for Leave</h2>
+        <h4>Apply for Leave</h4>
         <form id="applyLeaveForm" method="post">
             <div class="form-group">
                 <label for="leaveType">Leave Type:</label>
-                <select class="form-control" id="leaveType" name="leaveType" required>
+                <select class="form-control custom-select" id="leaveType" name="leaveType" required>
                     <option value="">Select Leave Type</option>
                     <option value="Sick Leave">Sick Leave</option>
-                    <option value="Vacation Leave">Vacation Leave</option>
+                    <option value="Maternity Leave">Maternity Leave</option>
                     <option value="Casual Leave">Casual Leave</option>
+                    <option value ="Paternity Leave">Paternity Leave</option>
                 </select>
             </div>
             <div class="form-group">
@@ -78,27 +250,25 @@
                 <label for="reason">Reason:</label>
                 <textarea class="form-control" id="reason" name="reason" rows="4" required></textarea>
             </div>
-            <div class="form-group">
-                <label for="comments">Comments (Optional):</label>
-                <textarea class="form-control" id="comments" name="comments" rows="2"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit Leave Request</button>
+            <button type="submit" class="btn btn-primary btn-block">Submit Leave Request</button>
         </form>
     </div>
 
+
     <!-- Applied Leaves Section -->
     <div id="appliedLeaves" class="form-section">
-        <h2>My Applied Leaves</h2>
+        <h4>My Applied Leaves</h4>
+        <hr>
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>Leave ID</th>
                 <th>Leave Type</th>
                 <th>From Date</th>
                 <th>To Date</th>
                 <th>Reason</th>
+                <th>Allocated Leaves</th>
                 <th>Status</th>
-                <th>Comments</th>
+
             </tr>
             </thead>
             <tbody>
@@ -109,11 +279,11 @@
 
     <!-- My Team Leaves Section -->
     <div id="myTeamLeaves" class="form-section">
-        <h2>My Team's Leave Requests</h2>
+        <h4>My Team's Leave Requests</h4>
+        <hr>
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>Leave ID</th>
                 <th>Employee Name</th>
                 <th>Leave Type</th>
                 <th>From Date</th>
@@ -128,7 +298,50 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Employee Details Modal -->
+    <div class="modal fade" id="employeeDetailsModal" tabindex="-1" role="dialog" aria-labelledby="employeeDetailsLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="employeeDetailsLabel">Employee Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="employeeDetails" class="manager-details">
+                    <h6>Employee Information</h6>
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Name:</strong> <span id="empName"></span></li>
+                        <li class="list-group-item"><strong>Email:</strong> <span id="empEmail"></span></li>
+                        <li class="list-group-item"><strong>Date of Birth:</strong> <span id="empDob"></span></li>
+                        <li class="list-group-item"><strong>Phone Number:</strong> <span id="empPhone"></span></li>
+                        <li class="list-group-item"><strong>Gender:</strong> <span id="empGender"></span></li>
+                    </ul>
+                    </div>
+                    <hr>
+                    <div id="managerDetails" class="manager-details">
+                        <h6>Manager Information</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Manager Name:</strong> <span id="managerName"></span></li>
+                            <li class="list-group-item"><strong>Manager Email:</strong> <span id="managerEmail"></span></li>
+                            <li class="list-group-item"><strong>Date of Birth:</strong> <span id="managerDob"></span></li>
+                            <li class="list-group-item"><strong>Manager Phone Number:</strong> <span id="managerPhone"></span></li>
+                            <li class="list-group-item"><strong>Gender:</strong> <span id="managerGender"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

@@ -9,6 +9,8 @@ public class Employee {
     private LocalDate DateOfBirth;
     private long phoneNumber;
     private int managerId;
+    private String gender;
+
 
     public Employee() {
 
@@ -69,6 +71,14 @@ public class Employee {
 
     public void setManagerId(int managerId) {
         this.managerId = managerId;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     @Override

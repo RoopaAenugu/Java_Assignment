@@ -23,7 +23,7 @@ public class EmployeeLeaveServiceImpl implements EmployeeLeaveService {
       return  employeeLeaveRepository.applyLeave(leaveRequest);
     }
     @Override
-    public List<LeaveRequest> getAllAppliedLeaves(int empId) {
+    public List<EmployeeLeave> getAllAppliedLeaves(int empId) {
         return employeeLeaveRepository.getAllAppliedLeaves(empId);
     }
 
@@ -37,13 +37,21 @@ public class EmployeeLeaveServiceImpl implements EmployeeLeaveService {
         return employeeLeaveRepository.rejectLeaveRequest(leaveId);
     }
 
-    @Override
-    public List<LeaveRequest> getMyTeamRequests(int managerId) {
-        return employeeLeaveRepository.getMyTeamRequests(managerId);
-    }
+
 
     @Override
     public List<EmployeeLeave> getLeavesOfEmployees(List<Integer> employeeIds) {
         return employeeLeaveRepository.getLeavesOfEmployees(employeeIds);
     }
+
+    @Override
+    public int getNumberOfLeavesAllocated(EmployeeLeave employeeLeave) {
+        return employeeLeaveRepository.getNumberOfLeavesAllocated(employeeLeave);
+    }
+
+    @Override
+    public int getTotalNumberOfLeavesTaken(int empId) {
+        return  employeeLeaveRepository.getTotalNumberOfLeavesTaken(empId);
+    }
+
 }

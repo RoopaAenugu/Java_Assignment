@@ -1,6 +1,7 @@
 package com.wavemaker.leavemanagement.service.impl;
 
 import com.wavemaker.leavemanagement.model.Employee;
+import com.wavemaker.leavemanagement.model.EmployeeManager;
 import com.wavemaker.leavemanagement.model.LeaveRequest;
 import com.wavemaker.leavemanagement.repository.EmployeeLeaveRepository;
 import com.wavemaker.leavemanagement.repository.EmployeeRepository;
@@ -36,5 +37,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public List<Integer> getEmpIdUnderManager(int managerId) {
         return employeeRepository.getEmpIdUnderManager(managerId);
+    }
+
+    @Override
+    public EmployeeManager getEmployeeManagerDetails(int employeeId) {
+        return employeeRepository.getEmployeeManagerDetails(employeeId);
+
     }
 }

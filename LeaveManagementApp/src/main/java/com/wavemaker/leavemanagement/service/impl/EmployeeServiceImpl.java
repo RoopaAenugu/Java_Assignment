@@ -1,5 +1,6 @@
 package com.wavemaker.leavemanagement.service.impl;
 
+import com.wavemaker.leavemanagement.factory.EmployeeRepositoryGlobalInstance;
 import com.wavemaker.leavemanagement.model.Employee;
 import com.wavemaker.leavemanagement.model.EmployeeManager;
 import com.wavemaker.leavemanagement.model.LeaveRequest;
@@ -16,7 +17,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     // Constructor to inject UserCookieTaskRepository
     public EmployeeServiceImpl() {
-        this.employeeRepository = new  EmployeeRepositoryImpl();
+        this.employeeRepository = EmployeeRepositoryGlobalInstance .getEmployeeRepositoryInstance();
     }
 
 

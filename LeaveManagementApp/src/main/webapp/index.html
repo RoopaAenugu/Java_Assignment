@@ -148,15 +148,20 @@
         .table th {
             background-color: #007bff;
             color: #ffffff;
+             font-size: 0.875em; /* Decreases the font size */
+             white-space: nowrap; /* Prevents wrapping to the next line */
 
         }
 
         .table td {
             vertical-align: middle;
-            text-align: center;
+            font-size: 0.875em; /* Decreases the font size */
+    white-space: nowrap; /* Prevents wrapping to the next line */
         }
        /* Apply Leave Form Styles*/
-       #applyLeave, #appliedLeaves,#myTeamLeaves {
+       #applyLeave {
+            width:600px;
+            margin: 0 auto;
             background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
@@ -181,12 +186,131 @@
             display: block;
             margin: 10px auto;
         }
+        /* Container for the header and filter */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for the filter dropdown */
+.filter-container {
+    display: flex;
+    align-items: center;
+}
+
+.filter-label {
+    margin-right: 10px; /* Space between label and dropdown */
+}
+
+.filter-dropdown {
+    width: 150px; /* Adjust width as needed */
+    padding: 5px; /* Adjust padding if needed */
+}
+        /* Leave Summary Cards */
+#leaveSummaryCards {
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    font-size: 1em;
+    color: #343a40;
+    padding: 15px;
+}
+/* Modal Style */
+.modal {
+    display: none;
+    position: fixed;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.modal-footer {
+    text-align: right;
+    padding-top: 10px;
+}
+
+.modal-close {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background-color: #0056b3;
+}
+
+ #leaveSummaryCardsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.leave-summary-container{
+max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+/* Style for the team leave summary cards */
+#teamLeaveSummaryContainer .card-body p {
+    margin: 10px; /* Adds space between paragraphs in the card body */
+    padding:5px;
+}
+
+#teamLeaveSummaryContainer .card-body {
+    padding:20px; /* Adds padding within the card body */
+   }
+#leaveSummaryCardsContainer .col-md-4 {
+    max-width: 300px; /* Control the max width of each card */
+    margin: 0 15px; /* Add horizontal margin to create spacing between cards */
+}
+
+@media (max-width: 767.98px) {
+    #leaveSummaryCardsContainer .col-md-4 {
+        max-width: 100%; /* Ensure full width on smaller screens */
+        margin-bottom: 20px; /* Add space between cards vertically */
+    }
+}
+
     </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Employee Dashboard</a>
+    <a class="nav-link" href="#" onclick="showSection('leaveSummaryCards')">Employee Dashboard</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -205,7 +329,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" id="profileLink">
                     <div class="profile-container" id="profileContainer">
-                        <span id="employeeName" class="emp-name">John Doe</span>
+                        <span id="employeeName" class="emp-name"></span>
                         <i id="profileIcon" class="fas fa-user profile-icon"></i>
                         <div id="profileDropdown" class="dropdown-menu">
                             <a class="dropdown-item" href="#" id="profileDetails">Profile</a>
@@ -223,7 +347,56 @@
 </nav>
 
 <div class="container">
-    <!-- Apply Leave Section -->
+    <!-- Leave Summary Cards Section -->
+    <div id="leaveSummaryCards" class="form-section leave-summary-container">
+        <div class="leave-summary">
+              <h4 class="text-center">Leave Summary</h4>
+              <div class="row justify-content-center" id="leaveSummaryCardsContainer">
+            <div id="sickLeaveCard" class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-header font-weight-bold">Sick Leave</div>
+                    <div class="card-body">
+                        <p class="card-text"><strong>Total Leaves:</strong>5</p>
+                        <p class="card-text"><strong>Leaves Taken:</strong>0</p>
+                        <p class="card-text"><strong>Available Leaves:</strong> 5</p>
+                    </div>
+                </div>
+            </div>
+            <div id="casualLeaveCard" class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-header font-weight-bold">Casual Leave</div>
+                    <div class="card-body">
+                        <p class="card-text"><strong>Total Leaves:</strong> 15</p>
+                        <p class="card-text"><strong>Leaves Taken:</strong> 0</p>
+                        <p class="card-text"><strong>Available Leaves:</strong> 15</p>
+                    </div>
+                </div>
+            </div>
+            <div id="paternityLeaveCard" class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-header font-weight-bold">Paternity Leave</div>
+                    <div class="card-body">
+                        <p class="card-text"><strong>Total Leaves:</strong> 3</p>
+                        <p class="card-text"><strong>Leaves Taken:</strong> 0</p>
+                        <p class="card-text"><strong>Available Leaves:</strong> 3</p>
+                    </div>
+                </div>
+            </div>
+            <div id="maternityLeaveCard" class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-header font-weight-bold">Maternity Leave</div>
+                    <div class="card-body">
+                        <p class="card-text"><strong>Total Leaves:</strong> 80</p>
+                        <p class="card-text"><strong>Leaves Taken:</strong> 0</p>
+                        <p class="card-text"><strong>Available Leaves:</strong> 80</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
     <!-- Apply Leave Section -->
     <div id="applyLeave" class="form-section">
         <h4>Apply for Leave</h4>
@@ -233,9 +406,9 @@
                 <select class="form-control custom-select" id="leaveType" name="leaveType" required>
                     <option value="">Select Leave Type</option>
                     <option value="Sick Leave">Sick Leave</option>
-                    <option value="Maternity Leave">Maternity Leave</option>
+                    <option value="Maternity Leave" id="maternityLeaveOption">Maternity Leave</option>
                     <option value="Casual Leave">Casual Leave</option>
-                    <option value ="Paternity Leave">Paternity Leave</option>
+                    <option value="Paternity Leave" id="paternityLeaveOption">Paternity Leave</option>
                 </select>
             </div>
             <div class="form-group">
@@ -257,8 +430,20 @@
 
     <!-- Applied Leaves Section -->
     <div id="appliedLeaves" class="form-section">
-        <h4>My Applied Leaves</h4>
+        <div class="header-container">
+            <h4>My Applied Leaves</h4>
+            <div class="form-group">
+                <select class="form-control custom-select" id="statusFilter" name="statusFilter">
+                    <option value="ALL">ALL REQUESTS</option>
+                    <option value="PENDING">PENDING</option>
+                    <option value="APPROVED">APPROVED</option>
+                    <option value="REJECTED">REJECTED</option>
+                </select>
+            </div>
+        </div>
+
         <hr>
+
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -268,7 +453,7 @@
                 <th>Reason</th>
                 <th>Allocated Leaves</th>
                 <th>Status</th>
-
+                <th>Applied On</th>
             </tr>
             </thead>
             <tbody>
@@ -277,9 +462,34 @@
         </table>
     </div>
 
+
     <!-- My Team Leaves Section -->
     <div id="myTeamLeaves" class="form-section">
-        <h4>My Team's Leave Requests</h4>
+        <div class="header-container">
+            <h4>My Team's Leave Requests</h4>
+            <div class="filter-container">
+                <select class="form-control custom-select filter-dropdown" id="teamStatusFilter"
+                        name="teamStatusFilter">
+                    <option value="ALL">ALL REQUESTS</option>
+                    <option value="PENDING">PENDING</option>
+                    <option value="APPROVED">APPROVED</option>
+                    <option value="REJECTED">REJECTED</option>
+                </select>
+            </div>
+
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="childNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('myTeamLeaves')">My Team Leaves</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('teamLeaveSummary')">EmployeeLeave Summary</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <hr>
         <table class="table table-bordered">
             <thead>
@@ -290,13 +500,24 @@
                 <th>To Date</th>
                 <th>Reason</th>
                 <th>Status</th>
+                <th>Applied On</th>
+                <th>Leaves Taken</th>
                 <th>Action</th>
+
             </tr>
             </thead>
             <tbody>
             <!-- Dynamic content will be populated here -->
             </tbody>
         </table>
+    </div>
+
+    <!-- Employee Leave Summary Section -->
+    <div id="teamLeaveSummary" class="form-section">
+        <h4>Employee Leave Summary</h4>
+        <div id="teamLeaveSummaryContainer" class="justify-content-center">
+
+        </div>
     </div>
 
     <!-- Employee Details Modal -->
@@ -312,23 +533,27 @@
                 </div>
                 <div class="modal-body">
                     <div id="employeeDetails" class="manager-details">
-                    <h6>Employee Information</h6>
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>Name:</strong> <span id="empName"></span></li>
-                        <li class="list-group-item"><strong>Email:</strong> <span id="empEmail"></span></li>
-                        <li class="list-group-item"><strong>Date of Birth:</strong> <span id="empDob"></span></li>
-                        <li class="list-group-item"><strong>Phone Number:</strong> <span id="empPhone"></span></li>
-                        <li class="list-group-item"><strong>Gender:</strong> <span id="empGender"></span></li>
-                    </ul>
+                        <h6>Employee Information</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Name:</strong> <span id="empName"></span></li>
+                            <li class="list-group-item"><strong>Email:</strong> <span id="empEmail"></span></li>
+                            <li class="list-group-item"><strong>Date of Birth:</strong> <span id="empDob"></span></li>
+                            <li class="list-group-item"><strong>Phone Number:</strong> <span id="empPhone"></span></li>
+                            <li class="list-group-item"><strong>Gender:</strong> <span id="empGender"></span></li>
+                        </ul>
                     </div>
                     <hr>
                     <div id="managerDetails" class="manager-details">
                         <h6>Manager Information</h6>
                         <ul class="list-group">
-                            <li class="list-group-item"><strong>Manager Name:</strong> <span id="managerName"></span></li>
-                            <li class="list-group-item"><strong>Manager Email:</strong> <span id="managerEmail"></span></li>
-                            <li class="list-group-item"><strong>Date of Birth:</strong> <span id="managerDob"></span></li>
-                            <li class="list-group-item"><strong>Manager Phone Number:</strong> <span id="managerPhone"></span></li>
+                            <li class="list-group-item"><strong>Manager Name:</strong> <span id="managerName"></span>
+                            </li>
+                            <li class="list-group-item"><strong>Manager Email:</strong> <span id="managerEmail"></span>
+                            </li>
+                            <li class="list-group-item"><strong>Date of Birth:</strong> <span id="managerDob"></span>
+                            </li>
+                            <li class="list-group-item"><strong>Manager Phone Number:</strong> <span
+                                    id="managerPhone"></span></li>
                             <li class="list-group-item"><strong>Gender:</strong> <span id="managerGender"></span></li>
                         </ul>
                     </div>
@@ -339,6 +564,18 @@
             </div>
         </div>
     </div>
+    <!-- Modal Structure -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <h4 id="modalTitle">Notice</h4>
+            <p id="modalMessage"></p>
+            <div class="modal-footer">
+                <button id="modalCloseButton" class="modal-close btn waves-effect waves-light">OK</button>
+            </div>
+        </div>
+
+    </div>
+
 
 </div>
 

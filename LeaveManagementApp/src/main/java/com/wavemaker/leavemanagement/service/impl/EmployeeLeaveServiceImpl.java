@@ -1,5 +1,8 @@
 package com.wavemaker.leavemanagement.service.impl;
 
+import com.wavemaker.leavemanagement.constants.LeaveRequestStatus;
+import com.wavemaker.leavemanagement.exception.ServerUnavailableException;
+import com.wavemaker.leavemanagement.factory.EmployeeLeaveRepositoryGlobalInstance;
 import com.wavemaker.leavemanagement.model.EmployeeLeave;
 import com.wavemaker.leavemanagement.model.LeaveRequest;
 import com.wavemaker.leavemanagement.repository.EmployeeCookieRepository;
@@ -8,6 +11,7 @@ import com.wavemaker.leavemanagement.repository.impl.EmployeeCookieRepositoryImp
 import com.wavemaker.leavemanagement.repository.impl.EmployeeLeaveRepositoryImpl;
 import com.wavemaker.leavemanagement.service.EmployeeLeaveService;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class EmployeeLeaveServiceImpl implements EmployeeLeaveService {
@@ -15,43 +19,53 @@ public class EmployeeLeaveServiceImpl implements EmployeeLeaveService {
 
     // Constructor to inject UserCookieTaskRepository
     public EmployeeLeaveServiceImpl() {
-        this.employeeLeaveRepository = new EmployeeLeaveRepositoryImpl();
+        this.employeeLeaveRepository = EmployeeLeaveRepositoryGlobalInstance.getEmployeeLeaveRepositoryInstance();
     }
 
     @Override
-    public LeaveRequest applyLeave(LeaveRequest leaveRequest) {
+    public LeaveRequest applyLeave(LeaveRequest leaveRequest) throws ServerUnavailableException {
       return  employeeLeaveRepository.applyLeave(leaveRequest);
     }
     @Override
-    public List<EmployeeLeave> getAllAppliedLeaves(int empId) {
-        return employeeLeaveRepository.getAllAppliedLeaves(empId);
+    public List<EmployeeLeave> getAppliedLeaves(int empId, LeaveRequestStatus status) throws ServerUnavailableException {
+        return employeeLeaveRepository.getAppliedLeaves(empId,status);
     }
 
     @Override
-    public LeaveRequest acceptLeaveRequest(int leaveId) {
+    public EmployeeLeave acceptLeaveRequest(int leaveId) throws ServerUnavailableException {
         return employeeLeaveRepository.acceptLeaveRequest(leaveId);
     }
 
     @Override
-    public LeaveRequest rejectLeaveRequest(int leaveId) {
+    public LeaveRequest rejectLeaveRequest(int leaveId) throws ServerUnavailableException {
         return employeeLeaveRepository.rejectLeaveRequest(leaveId);
     }
 
 
 
     @Override
-    public List<EmployeeLeave> getLeavesOfEmployees(List<Integer> employeeIds) {
-        return employeeLeaveRepository.getLeavesOfEmployees(employeeIds);
+    public List<EmployeeLeave> getLeavesOfEmployees(List<Integer> employeeIds,LeaveRequestStatus status) throws ServerUnavailableException {
+        return employeeLeaveRepository.getLeavesOfEmployees(employeeIds,status);
     }
 
     @Override
-    public int getNumberOfLeavesAllocated(EmployeeLeave employeeLeave) {
-        return employeeLeaveRepository.getNumberOfLeavesAllocated(employeeLeave);
+    public int getNumberOfLeavesAllocated(String leaveType) {
+        return employeeLeaveRepository.getNumberOfLeavesAllocated(leaveType);
     }
 
     @Override
-    public int getTotalNumberOfLeavesTaken(int empId) {
-        return  employeeLeaveRepository.getTotalNumberOfLeavesTaken(empId);
+    public int getTotalNumberOfLeavesTaken(int empId,int leaveTypeId) throws SQLException {
+        return  employeeLeaveRepository.getTotalNumberOfLeavesTaken(empId,leaveTypeId);
+    }
+
+    @Override
+    public int getLeaveTypeId(String leaveType) throws ServerUnavailableException {
+        return employeeLeaveRepository.getLeaveTypeId(leaveType);
+    }
+
+    @Override
+    public String getLeaveType(int leaveTypeId) throws ServerUnavailableException {
+        return employeeLeaveRepository.getLeaveType(leaveTypeId);
     }
 
 }

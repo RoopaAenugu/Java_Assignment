@@ -1,15 +1,25 @@
 package com.wavemaker.leavemanagement.model;
 
 public class EmployeeLeave extends LeaveRequest {
-    String empName;
-    int typeLimit;
-    int totalEmployeeLeaves;
+    private String empName;
+    private int typeLimit;
+    private String leaveType;
+    private int totalEmployeeLeaves;
+
 
     public int getTotalEmployeeLeaves() {
         return totalEmployeeLeaves;
     }
 
-    public void setTotalEmployeeLeaves(int totalEmployeeLeaves) {
+    public String getLeaveType() {
+        return leaveType;
+    }
+
+    public void setLeaveType(String leaveType) {
+        this.leaveType = leaveType;
+    }
+
+    public void setTotalEmployeeLeavesTaken(int totalEmployeeLeaves) {
         this.totalEmployeeLeaves = totalEmployeeLeaves;
     }
 
@@ -29,11 +39,5 @@ public class EmployeeLeave extends LeaveRequest {
         this.empName = empName;
     }
 
-    @Override
-    public String toString() {
-        return "EmployeeLeave{" +
-                "empName='" + empName + '\'' +
-                ", typeLimit=" + typeLimit +
-                '}';
-    }
+
 }

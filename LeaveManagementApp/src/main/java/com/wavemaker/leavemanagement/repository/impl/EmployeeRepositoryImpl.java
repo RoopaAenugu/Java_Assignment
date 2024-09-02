@@ -99,17 +99,22 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     @Override
     public Employee getEmployeeByLoginId(int loginId) {
         Employee employee = null;
-        // SQL query to get the employee_id associated with the loginId
+
         try (Connection connection = DbConnection.getConnection();
              PreparedStatement getEmployeeIdStatement = connection.prepareStatement(GET_EMPLOYEE_BY_LOGIN_ID_QUERY)) {
 
             getEmployeeIdStatement.setInt(1, loginId);
 
+            // Execute the query to get the employee ID
             try (ResultSet employeeIdResultSet = getEmployeeIdStatement.executeQuery()) {
                 if (employeeIdResultSet.next()) {
                     int employeeId = employeeIdResultSet.getInt("EMPLOYEE_ID");
+
+                    // Use the same connection for the next query
                     try (PreparedStatement getEmployeeStatement = connection.prepareStatement(GET_EMPLOYEE_DETAILS_QUERY)) {
                         getEmployeeStatement.setInt(1, employeeId);
+
+                        // Execute the query to get the employee details
                         try (ResultSet employeeResultSet = getEmployeeStatement.executeQuery()) {
                             if (employeeResultSet.next()) {
                                 employee = new Employee();
@@ -133,6 +138,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
         return employee;
     }
+
     @Override
     public List<Integer> getEmpIdUnderManager(int managerId) {
         List<Integer> employeeIds = new ArrayList<>();

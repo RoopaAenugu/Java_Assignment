@@ -44,17 +44,17 @@ public class AuthenticationFilter implements Filter {
                 logger.error("Authentication failed. Redirecting to login.");
                 httpServletResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                 String jsonResponse = gson.toJson("Authentication required. Redirecting to login.");
-                sendResponse(httpServletResponse, jsonResponse);
+                writeResponse(httpServletResponse, jsonResponse);
             }
         } catch (ServletException | IOException e) {
             logger.error("Error during authentication", e);
             httpServletResponse.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             String jsonResponse = gson.toJson("An error occurred during authentication.");
-            sendResponse(httpServletResponse, jsonResponse);
+            writeResponse(httpServletResponse, jsonResponse);
         }
     }
 
-    private void sendResponse(HttpServletResponse httpServletResponse, String jsonResponse) {
+    private void writeResponse(HttpServletResponse httpServletResponse, String jsonResponse) {
         try (PrintWriter printWriter = httpServletResponse.getWriter()) {
             logger.info("Sending response to client");
             httpServletResponse.setContentType("application/json");
